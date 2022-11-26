@@ -1,0 +1,1860 @@
+﻿Mods: {
+	CharlieStarfarer: {
+		Starfarers: {
+			Charlie: {
+				StarfarerMenu: {
+					//{0} is the player's name
+					MenuOnArchiveHoverButton: MenuOnArchiveHoverButton
+					MenuOnConfirmHoverButton: MenuOnConfirmHoverButton
+					MenuOnArchiveConfirmButton_ArchiveActive: MenuOnArchiveConfirmButton_ArchiveActive
+					MenuOnArchiveConfirmButton_ArchiveNotActive: MenuOnArchiveConfirmButton_ArchiveNotActive
+					MenuOnStellarArrayHoverButton: MenuOnStellarArrayHoverButton
+					MenuOnStellarArrayConfirmButton: MenuOnStellarArrayConfirmButton
+					MenuOnStellarNovaConfirmButton: MenuOnStellarNovaConfirmButton
+					MenuOnVoyageHoverButton: MenuOnVoyageHoverButton
+					MenuOnArmorSlotHover: MenuOnArmorSlotHover
+					MenuOnVanitySlotHover: MenuOnVanitySlotHover
+					MenuOnStellarNovaHoverButton: MenuOnStellarNovaHoverButton
+					MenuOnStellarNovaHoverButton_Locked: MenuOnStellarNovaHoverButton_Locked
+
+					MenuOnOpen: MenuOnOpen
+					MenuOnOpen_InCombat: MenuOnOpen_InCombat {1} seconds
+				}
+				StellarNovaMenu:
+				{
+					NovaOnAffix1Hover: NovaOnAffix1Hover
+					NovaOnAffix2Hover: NovaOnAffix2Hover
+					NovaOnAffix3Hover: NovaOnAffix3Hover
+					NovaOnConfirmHover: NovaOnConfirmHover
+					NovaOnResetHover: NovaOnResetHover
+					NovaSpecialAffixHover: NovaSpecialAffixHover
+
+					EdinGenesisQuasar_Locked: EdinGenesisQuasar_Locked
+					EdinGenesisQuasar_Unlocked: EdinGenesisQuasar_Unlocked
+
+					GardenOfAvalon_Locked: GardenOfAvalon_Locked
+					GardenOfAvalon_Unlocked: GardenOfAvalon_Unlocked
+
+					KiwamiRyuken_Locked: KiwamiRyuken_Locked
+					KiwamiRyuken_Unlocked: KiwamiRyuken_Unlocked
+
+					Laevateinn_Locked: Laevateinn_Locked
+					Laevateinn_Unlocked: Laevateinn_Unlocked
+
+					Theofania_Locked: Theofania_Locked
+					Theofania_Unlocked: Theofania_Unlocked
+				}
+				Dialog: {
+					WeaponDialogue: {
+						1: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						3: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						5: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						7: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						9: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						11: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						13: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						15: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						17: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						19: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						20: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						21: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						23: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						25: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						27: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						29: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						30: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						31: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						32: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						33: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						34: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						35: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						37: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						38: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						39: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						40: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						41: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						42: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						43: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						44: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						45: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						46: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						47: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						48: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						49: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						50: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Perseus: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						51: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						53: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						54: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						55: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						57: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						59: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						60: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						61: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						62: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						63: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						64: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						66: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						68: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						70: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						72: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						73: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						74: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						76: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+					}
+					IdleDialogueHardmode: {	
+						1: {
+							Text: Here is some text
+							Expression: 0
+						}
+					}
+					RegularIdleDialogue: {
+						NormalIdleDialogue1: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue2: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue3: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue4: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue5: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue6: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue7: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue8: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						NormalIdleDialogue9: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue1: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue2: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue3: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue4: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue5: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue6: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue7: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue8: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HardIdleDialogue9: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						LightIdleDialogue: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+					}
+					BossDialogue: {
+						KingSlime: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						CthulhuEye: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						CorruptionBoss: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						QueenBee: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Skeletron: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						WallOfFlesh: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Twins: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Destroyer: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						SkeletronPrime: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						AllMechs: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Plantera: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Golem: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						DukeFishron: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Cultist: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						MoonLord: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						WarriorOfLight: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						AllVanillaBosses: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						VanillaAndWarrior: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Vagrant: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Nalhaun: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Penth: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Arbitration: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Tsukiyomi: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						QueenSlime: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						EmpressOfLight: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Deerclops: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+					}
+					CalamityBossDialogue: {
+						DesertScourge: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Crabulon: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						HiveMind: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Perforators: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						SlimeGod: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Cryogen: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						AquaticScourge: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						BrimstoneElemental: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Calamitas: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Leviathan: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						AstrumAureus: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						PlaguebringerGoliath: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Ravager: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						AstrumDeus: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+					}
+					BossItemDialogue: {
+						Nalhaun: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Penth: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Arbitration: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+						Warrior: {	
+							1: {
+								Text: Here is some text
+								Expression: 0
+							}
+						}
+					}
+				}
+				Expression: {	
+					Tsukiyomi1: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPoison: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onIchor: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSilence: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCurse: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onFrozen: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onFrostburn: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onWebbed: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStoned: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBurning: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSuffocation: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onFire: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDrowning: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBleeding: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onConfusion: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillCritter: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillEnemy: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillEnemyDanger: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillBossEnemy: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCrit: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onTakeHeavyDamage: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDeath: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onUnknownBoss: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEyeOfCthulhu: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKingSlime: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEaterOfWorlds: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBrainOfCthulhu: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onQueenBee: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSkeletron: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onWallOfFlesh: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onTwins: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDeerclops: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onQueenSlime: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEmpress: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDestroyer: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSkeletronPrime: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPlantera: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onGolem: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDukeFishron: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLunaticCultist: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onMoonLord: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onWarriorOfLight: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onVagrant: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onNalhaun: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPenth: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onArbiter: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDesertScourge: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCrabulon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onHiveMind: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPerforators: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSlimeGod: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCryogen: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAquaticScourge: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBrimstoneElemental: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCalamitas: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSiren: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAnahita: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLeviathan: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAstrumAureus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPlaguebringer: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onRavager: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAstrumDeus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onProfanedGuardian: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDragonfolly: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onProvidence: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStormWeaver: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCeaselessVoid: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSignus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPolterghast: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onOldDuke: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDog: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onYharon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onYharonDespawn: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSupremeCalamitas: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDraedon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onArtemis: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onThanatos: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAres: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onTrojanSquirrel: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDeviantt: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEridanus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAbominationn: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onMutant: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onGrandThunderBird: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onQueenJellyfish: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onViscount: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onGraniteEnergyStorm: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBuriedChampion: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStarScouter: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBoreanStrider: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCoznix: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLich: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAbyssion: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPrimordials: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPutridPinky: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPharaoh: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAdvisor: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPolaris: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLux: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSubspaceSerpent: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterDesert: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterJungle: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterBeach: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSpace: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterUnderworld: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterCorruption: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterCrimson: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSnow: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterHallow: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterMushroom: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterDungeon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterMeteorite: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterVerdant: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterCrag: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterAstral: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSunkenSea: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSulphurSea: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterAbyss: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterGranite: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterMarble: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterAquaticDepths: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onRain: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSnow: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSandstorm: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKeyOfChronology: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLivingDead: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onButchersDozen: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStellarNovaCharged: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onObservatory: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSpaceRuins: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCitadel: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onConfluence: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCity: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPoison: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onIchor: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSilence: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCurse: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onFrozen: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onFrostburn: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onWebbed: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStoned: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBurning: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSuffocation: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onFire: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDrowning: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBleeding: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onConfusion: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillCritter: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillEnemy: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillEnemyDanger: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKillBossEnemy: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCrit: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onTakeHeavyDamage: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDeath: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onUnknownBoss: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEyeOfCthulhu: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKingSlime: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEaterOfWorlds: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBrainOfCthulhu: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onQueenBee: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSkeletron: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onWallOfFlesh: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onTwins: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDeerclops: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onQueenSlime: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEmpress: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDestroyer: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSkeletronPrime: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPlantera: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onGolem: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDukeFishron: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLunaticCultist: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onMoonLord: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onWarriorOfLight: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onVagrant: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onNalhaun: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPenth: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onArbiter: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDesertScourge: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCrabulon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onHiveMind: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPerforators: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSlimeGod: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCryogen: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAquaticScourge: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBrimstoneElemental: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCalamitas: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSiren: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAnahita: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLeviathan: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAstrumAureus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPlaguebringer: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onRavager: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAstrumDeus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onProfanedGuardian: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDragonfolly: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onProvidence: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStormWeaver: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCeaselessVoid: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSignus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPolterghast: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onOldDuke: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDog: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onYharon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onYharonDespawn: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSupremeCalamitas: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDraedon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onArtemis: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onThanatos: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAres: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onTrojanSquirrel: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onDeviantt: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEridanus: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAbominationn: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onMutant: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onGrandThunderBird: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onQueenJellyfish: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onViscount: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onGraniteEnergyStorm: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBuriedChampion: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStarScouter: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onBoreanStrider: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCoznix: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLich: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAbyssion: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPrimordials: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPutridPinky: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPharaoh: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onAdvisor: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onPolaris: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLux: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSubspaceSerpent: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterDesert: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterJungle: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSpace: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterUnderworld: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterBeach: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterCorruption: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterCrimson: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSnow: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterHallow: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterMushroom: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterDungeon: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterMeteorite: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterVerdant: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterCrag: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterAstral: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSunkenSea: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterSulphurSea: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterAbyss: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterGranite: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterMarble: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onEnterAquaticDepths: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onRain: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSnow: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSandstorm: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onKeyOfChronology: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onLivingDead: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onButchersDozen: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onStellarNovaCharged: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onObservatory: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onSpaceRuins: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCitadel: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onConfluence: {
+						Text: Here is some text
+						Expression: 0
+					}
+					onCity: {
+						Text: Here is some text
+						Expression: 0
+					}
+				}
+			}
+		}
+		Dialog: {
+			Charlie_Set: {
+				1: {
+					Text: We made a good team, once, {0}
+					Expression: 0
+				} 
+				2: {
+					Text: Perhaps we will make one again.
+					Expression: 1
+				}
+			}
+			Charlie_Unset: {
+				1: {
+					Text: I'll return your precious Starfarer back, {0}
+					Expression: 0
+				} 
+				2: {
+					Text: May we meet again.
+					Expression: 1
+				}
+			}
+		}
+	}
+}

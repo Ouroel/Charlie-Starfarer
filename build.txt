@@ -1,0 +1,8 @@
+displayName = Charlie Starfarer
+author = Yreorel
+version = 0.1
+
+modReferences = StarsAboveAPI
+sortAfter = StarsAboveAPI
+
+includePDB = false

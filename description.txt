@@ -1,0 +1,5 @@
+Adds Charlie from Don't Starve Together as a Starfarer.
+
+Charlie is an Umbral Starfarer and can be acquired by using the rose a new character spawns in with.
+
+Requires Stars Above API.
