@@ -379,15 +379,93 @@
 					}
 					IdleDialogueHardmode: {	
 						1: {
-							Text: Here is some text
+							Text: Here is some text (1)
 							Expression: 0
+						}
+						2: {
+							Text: Here is some text (1)
+							Expression: 1
+						}
+						3: {
+							Text: Here is some text (2)
+							Expression: 2
+						}
+						4: {
+							Text: Here is some text (3)
+							Expression: 3
+						}
+						5: {
+							Text: Here is some text (3)
+							Expression: 4
+						}
+						6: {
+							Text: Here is some text (3)
+							Expression: 5
+						}
+						7: {
+							Text: Here is some text (3)
+							Expression: 6
+						}
+					}
+					IdleDialogue: {	
+						1: {
+							Text: Here is some text (1)
+							Expression: 0
+						}
+						2: {
+							Text: Here is some text (1)
+							Expression: 1
+						}
+						3: {
+							Text: Here is some text (2)
+							Expression: 2
+						}
+						4: {
+							Text: Here is some text (3)
+							Expression: 3
+						}
+						5: {
+							Text: Here is some text (3)
+							Expression: 4
+						}
+						6: {
+							Text: Here is some text (3)
+							Expression: 5
+						}
+						7: {
+							Text: Here is some text (3)
+							Expression: 6
 						}
 					}
 					RegularIdleDialogue: {
 						NormalIdleDialogue1: {	
 							1: {
-								Text: Here is some text
+								Text: Here is some text (1)
 								Expression: 0
+							}
+							2: {
+								Text: Here is some text (1)
+								Expression: 1
+							}
+							3: {
+								Text: Here is some text (2)
+								Expression: 2
+							}
+							4: {
+								Text: Here is some text (3)
+								Expression: 3
+							}
+							5: {
+								Text: Here is some text (3)
+								Expression: 4
+							}
+							6: {
+								Text: Here is some text (3)
+								Expression: 5
+							}
+							7: {
+								Text: Here is some text (3)
+								Expression: 6
 							}
 						}
 						NormalIdleDialogue2: {	
@@ -1838,7 +1916,7 @@
 			Charlie_Set: {
 				1: {
 					Text: We made a good team, once, {0}
-					Expression: 0
+					Expression: 4
 				} 
 				2: {
 					Text: Perhaps we will make one again.
@@ -1848,11 +1926,11 @@
 			Charlie_Unset: {
 				1: {
 					Text: I'll return your precious Starfarer back, {0}
-					Expression: 0
+					Expression: 3
 				} 
 				2: {
 					Text: May we meet again.
-					Expression: 1
+					Expression: 4
 				}
 			}
 		}

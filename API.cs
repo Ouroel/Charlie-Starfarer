@@ -29,6 +29,26 @@ namespace StarsAboveAPI
             return (int)StarsAboveAPI.Call(YourMod, 11, player);
         }
 
+
+        /// <summary>
+        /// Returns the blink timer of the current player. Used for making starfarers blink at regular intervals.
+        /// </summary>
+        /// <param name="player">Player</param>
+        internal static int GetBlinkTimer(Player player)
+        {
+            return (int)StarsAboveAPI.Call(YourMod, 14, player);
+        }
+
+
+        /// <summary>
+        /// Returns true if Stars Above April Fools is enabled (places shades on everyone)
+        /// </summary>
+        /// <param name="player">Player</param>
+        internal static bool GetShadesOn()
+        {
+            return (bool)StarsAboveAPI.Call(YourMod, 15);
+        }
+
         /// <summary>
         /// Gets the current starfarer. 0 = no starfarer, 1 = aspho 2 = eri. Item2 is the modded starfarer, if any.
         /// </summary>
@@ -36,6 +56,23 @@ namespace StarsAboveAPI
         internal static Tuple<int, object> GetCurrentStarfarer(Player player)
         {
             return (Tuple<int, object>)StarsAboveAPI.Call(YourMod, 0, player);
+        }
+
+        /// <summary>
+        /// Gets the original starfarer. 0 = no starfarer, 1 = aspho 2 = eri.
+        /// </summary>
+        /// <param name="player">Player</param>
+        internal static int GetOriginalStarfarer(Player player)
+        {
+            return (int)StarsAboveAPI.Call(YourMod, 16, player);
+        }
+
+        /// <summary>
+        /// Resets popups. If OnResetDialog is not null, resets dialog boxes. If OnResetExpression is not null, reset expressions. If OnResetVN is not null, reset the VN.
+        /// </summary>
+        internal static void ResetPopup(Action OnResetDialog = null, Action OnResetExpression = null, Action OnResetVN = null)
+        {
+            StarsAboveAPI.Call(YourMod, 17, OnResetDialog, OnResetExpression, OnResetVN);
         }
 
         /// <summary>
@@ -65,9 +102,9 @@ namespace StarsAboveAPI
         /// <param name="condition">return true if stuff is done, otherwise return false. Also do stuff in here. Can be null.</param>
         /// <param name="itemID">The item to spawn. -1 if not spawning.</param>
         /// <param name="itemCount">Quantity of spawned items</param>
-        internal static object AddSpatialDiskDialog(Tuple<string, int>[] textData, float priority, Func<bool> condition, int itemID = -1, int itemCount = 1, Action<SpriteBatch, int, Rectangle, Color> customDraw = null, Action OnDialogAdvanced = null)
+        internal static object AddSpatialDiskDialog(Tuple<string, int>[] textData, float priority, Func<bool> condition, int itemID = -1, int itemCount = 1, Action<SpriteBatch, int, Rectangle, Color> customDraw = null, Action<SpriteBatch, int, Rectangle, Color> customDrawOverUI = null, Action OnDialogAdvanced = null)
         {
-            return StarsAboveAPI.Call(YourMod, 2, textData, condition, priority, itemID, itemCount, customDraw, OnDialogAdvanced);
+            return StarsAboveAPI.Call(YourMod, 2, textData, condition, priority, itemID, itemCount, customDraw, customDrawOverUI, OnDialogAdvanced);
         }
 
         /// <summary>
@@ -78,9 +115,9 @@ namespace StarsAboveAPI
         /// <param name="condition">return true if stuff is done, otherwise return false. Also do stuff in here. Can be null.</param>
         /// <param name="itemID">The item to spawn. -1 if not spawning.</param>
         /// <param name="itemCount">Quantity of spawned items</param>
-        internal static object AddSpatialDiskDialogDatadriven(string LocalizationPath, float priority, Func<bool> condition, int itemID = -1, int itemCount = 1, Action<SpriteBatch, int, Rectangle, Color> customDraw = null, Action OnDialogAdvanced = null)
+        internal static object AddSpatialDiskDialogDatadriven(string LocalizationPath, float priority, Func<bool> condition, int itemID = -1, int itemCount = 1, Action<SpriteBatch, int, Rectangle, Color> customDraw = null, Action<SpriteBatch, int, Rectangle, Color> customDrawOverUI = null, Action OnDialogAdvanced = null)
         {
-            return StarsAboveAPI.Call(YourMod, 2, LocalizationPath, condition, priority, itemID, itemCount, customDraw, OnDialogAdvanced);
+            return StarsAboveAPI.Call(YourMod, 2, LocalizationPath, condition, priority, itemID, itemCount, customDraw, customDrawOverUI, OnDialogAdvanced);
         }
 
         /*
@@ -148,9 +185,9 @@ namespace StarsAboveAPI
         /// <param name="ActiveTimer">-1 for default (config modified), otherwise it will last for this long</param>
         /// <param name="force">If it will ignore the prompt cooldown</param>
         /// <param name="CustomDraw">Overwrites the portrait drawing function. Takes in the expression, destination rectangle, and color.</param>
-        internal static void SetPromptExpression(string Identifier, string Dialogue, int Expression, int ActiveTimer = -1, bool force = false, Action<SpriteBatch, int, Rectangle, Color> CustomDraw = null)
+        internal static void SetPromptExpression(string Identifier, string Dialogue, int Expression, int ActiveTimer = -1, bool force = false, Action<SpriteBatch, int, Rectangle, Color> CustomDraw = null, Action<SpriteBatch, int, Rectangle, Color> CustomDrawOverUI = null)
         {
-            StarsAboveAPI.Call(YourMod, 5, Identifier, Dialogue, Expression, ActiveTimer, force, CustomDraw);
+            StarsAboveAPI.Call(YourMod, 5, Identifier, Dialogue, Expression, ActiveTimer, force, CustomDraw, CustomDrawOverUI);
         }
 
         /// <summary>
@@ -205,14 +242,17 @@ namespace StarsAboveAPI
         /// <param name="ReplaceExpression">Takes in the originating mod and internal dialog ID/priority. Call SetPromptExpression with Forced = true in this and return true if you did.</param>
         /// <param name="ReplaceVN">Takes in the originating mod and internal dialog ID/priority. Call OpenVN in this and return true if you did.</param>
         internal static object AddNewStarfarer(
+            string StarfarerName,
             int StarfarerToSpoof = 1,
             //expressions
             Func<Mod, string, int, int, bool> ReplaceExpression = null, //takes in mod, string, expression face id, and duration, does stuff. Forcibly call SetPromptExpression in this.
             Func<Mod, string, SpriteBatch, int, Rectangle, Color, bool> ReplaceExpressionDrawInfo = null, //return false if you dont wanna replace
+            Func<Mod, string, SpriteBatch, int, Rectangle, Color, bool> ReplaceExpressionDrawInfoOverUI = null, //return false if you dont wanna replace
 
             //dialogue
             Func<Mod, float, bool> ReplaceDialogue = null, //call ForceOpenSpatialDiskDialogWindow
             Func<Mod, float, SpriteBatch, int, Rectangle, Color, bool> ReplaceDialogueDrawInfo = null,
+            Func<Mod, float, SpriteBatch, int, Rectangle, Color, bool> ReplaceDialogueDrawInfoOverUI = null,
 
             //VN
             Func<Mod, float, bool> ReplaceVN = null, //call OpenVN
@@ -260,14 +300,17 @@ namespace StarsAboveAPI
             )
         {
             return StarsAboveAPI.Call(YourMod, 9,
+                StarfarerName,
                 StarfarerToSpoof,
                 //expressions
                 ReplaceExpression, //takes in mod and string, does stuff. Forcibly call SetPromptExpression in this.
                 ReplaceExpressionDrawInfo, //return false if you dont wanna replace
+                ReplaceExpressionDrawInfoOverUI,
 
                 //dialogue
                 ReplaceDialogue, //call ForceOpenSpatialDiskDialogWindow
                 ReplaceDialogueDrawInfo,
+                ReplaceDialogueDrawInfoOverUI,
 
                 //VN
                 ReplaceVN, //call OpenVN
@@ -438,7 +481,7 @@ namespace StarsAboveAPI
             Dialog2_Hardmode = GenerateDialog("IdleDialogueHardmode");
 
             Dialogue[1] = GenerateDialog("WeaponDialogue", WeaponDialogDrops[1].Item1, WeaponDialogDrops[1].Item2);
-            Dialogue[2] = GenerateDialog("IdleDialogueHardmode", WeaponDialogDrops[2].Item1, WeaponDialogDrops[2].Item2);
+            Dialogue[2] = GenerateDialog("IdleDialogue", WeaponDialogDrops[2].Item1, WeaponDialogDrops[2].Item2);
             Dialogue[3] = GenerateDialog("RegularIdleDialogue.NormalIdleDialogue1", WeaponDialogDrops[3].Item1, WeaponDialogDrops[3].Item2);
             Dialogue[4] = GenerateDialog("RegularIdleDialogue.NormalIdleDialogue2", WeaponDialogDrops[4].Item1, WeaponDialogDrops[4].Item2);
             Dialogue[5] = GenerateDialog("RegularIdleDialogue.NormalIdleDialogue3", WeaponDialogDrops[5].Item1, WeaponDialogDrops[5].Item2);
@@ -568,13 +611,19 @@ namespace StarsAboveAPI
         {
             string path = GetLocalizationPath() + ".Dialog." + type;
 
-            return API.AddSpatialDiskDialogDatadriven(path, 0, return_false, itemID, itemCount, CustomDrawDialog);
+            return API.AddSpatialDiskDialogDatadriven(path, 0, return_false, itemID, itemCount, CustomDrawDialog, CustomDrawDialog_OverUI);
         }
 
         public virtual void CustomDrawDialog(SpriteBatch SpriteBatch, int Expression, Rectangle Bounds, Color Alpha)
         {
         }
         public virtual void CustomDrawExpression(SpriteBatch SpriteBatch, int Expression, Rectangle Bounds, Color Alpha)
+        {
+        }
+        public virtual void CustomDrawDialog_OverUI(SpriteBatch SpriteBatch, int Expression, Rectangle Bounds, Color Alpha)
+        {
+        }
+        public virtual void CustomDrawExpression_OverUI(SpriteBatch SpriteBatch, int Expression, Rectangle Bounds, Color Alpha)
         {
         }
 
@@ -618,11 +667,11 @@ namespace StarsAboveAPI
             if (CustomFacePath != FaceNumber)
             {
                 int Face = int.Parse(FaceNumber);
-                API.SetPromptExpression(Localization, TextPath, Face, ExpressionDuration, CustomDraw: CustomDrawExpression);
+                API.SetPromptExpression(Localization, TextPath, Face, ExpressionDuration, CustomDraw: CustomDrawExpression, CustomDrawOverUI: CustomDrawExpression_OverUI);
             }
             else
             {
-                API.SetPromptExpression(Localization, TextPath, ExpressionFace, ExpressionDuration, CustomDraw: CustomDrawExpression);
+                API.SetPromptExpression(Localization, TextPath, ExpressionFace, ExpressionDuration, CustomDraw: CustomDrawExpression, CustomDrawOverUI: CustomDrawExpression_OverUI);
             }
             return true;
         }
@@ -630,12 +679,14 @@ namespace StarsAboveAPI
     public abstract class StarsAboveStarfarer_Custom : ModType
     {
         public object CustomStarfarerObject = null;
+
+        public virtual string StarfarerName => "";
         protected override sealed void Register()
         {
             if (API.StarsAboveAPI == null) return;
             if (API.YourMod == null)
                 API.YourMod = Mod;
-            CustomStarfarerObject = API.AddNewStarfarer(StarfarerToSpoof, ReplaceExpression, ReplaceExpressionDrawInfo, ReplaceDialogue, ReplaceDialogueDrawInfo, ReplaceVN, ReplaceVNDrawInfo, ReplaceStarfarerUIDrawInfo, ReplaceStarfarerUIDrawInfoBlink, ReplaceNovaUIDrawInfo, ReplaceNovaUIDrawInfoBlink, HasCustomNovaCutInDialog ? ReplaceNovaCutInUIDrawInfo : null,
+            CustomStarfarerObject = API.AddNewStarfarer(StarfarerName, StarfarerToSpoof, ReplaceExpression, ReplaceExpressionDrawInfo, ReplaceExpressionDrawInfoOverUI, ReplaceDialogue, ReplaceDialogueDrawInfo, ReplaceDialogueDrawInfoOverUI, ReplaceVN, ReplaceVNDrawInfo, ReplaceStarfarerUIDrawInfo, ReplaceStarfarerUIDrawInfoBlink, ReplaceNovaUIDrawInfo, ReplaceNovaUIDrawInfoBlink, HasCustomNovaCutInDialog ? ReplaceNovaCutInUIDrawInfo : null,
                 CustomNovaDialog, OnActivateStellarNova,
                 MenuOnOpen(0) == null ? null : MenuOnOpen,
                 MenuOnArchiveConfirmButton(true) == null ? null : MenuOnArchiveConfirmButton,
@@ -668,10 +719,12 @@ namespace StarsAboveAPI
         //expressions
         public virtual bool ReplaceExpression(Mod ExpressionSourceMod, string ExpressionText, int ExpressionFace, int ExpressionDuration) { return false; } //takes in mod and string, does stuff. Forcibly call SetPromptExpression in this.
         public virtual bool ReplaceExpressionDrawInfo(Mod ExpressionSourceMod, string ExpressionText, SpriteBatch SpriteBatch, int BlinkTimer, Rectangle Bounds, Color Alpha) { return false; } //return false if you dont wanna replace
+        public virtual bool ReplaceExpressionDrawInfoOverUI(Mod ExpressionSourceMod, string ExpressionText, SpriteBatch SpriteBatch, int BlinkTimer, Rectangle Bounds, Color Alpha) { return false; } //return false if you dont wanna replace
 
         //dialogue
         public virtual bool ReplaceDialogue(Mod DialogSourceMod, float DialogPriority) { return false; } //call ForceOpenSpatialDiskDialogWindow
         public virtual bool ReplaceDialogueDrawInfo(Mod DialogSourceMod, float DialogPriority, SpriteBatch SpriteBatch, int BlinkTimer, Rectangle Bounds, Color Alpha) { return false; }
+        public virtual bool ReplaceDialogueDrawInfoOverUI(Mod DialogSourceMod, float DialogPriority, SpriteBatch SpriteBatch, int BlinkTimer, Rectangle Bounds, Color Alpha) { return false; }
 
         //VN
         public virtual bool ReplaceVN(Mod VNSourceMod, float VNPriority) { return false; } //call OpenVN

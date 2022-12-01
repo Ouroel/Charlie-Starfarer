@@ -14,9 +14,9 @@ namespace CharlieStarfarer
         public override void PostSetupContent()
         {
             CharlieStarfarerSwap_Dialog = API.AddSpatialDiskDialogDatadriven("Mods.CharlieStarfarer.Dialog.Charlie_Set", 10, () => false,
-            OnDialogAdvanced: CharlieSet);
+            OnDialogAdvanced: CharlieSet, customDraw: ModContent.GetInstance<Charlie>().CustomDrawDialog, customDrawOverUI: ModContent.GetInstance<Charlie>().CustomDrawDialog_OverUI);
             CharlieStarfarerUnswap_Dialog = API.AddSpatialDiskDialogDatadriven("Mods.CharlieStarfarer.Dialog.Charlie_Unset", 10, () => false,
-            OnDialogAdvanced: CharlieUnset);
+            OnDialogAdvanced: CharlieUnset, customDraw: ModContent.GetInstance<Charlie>().CustomDrawDialog, customDrawOverUI: ModContent.GetInstance<Charlie>().CustomDrawDialog_OverUI);
             API.AddSpatialDiskDialogArchive(2, 0.12111111f, () => {
                 if (API.GetCurrentStarfarer(Main.LocalPlayer).Item2 == ModContent.GetInstance<Charlie>().CustomStarfarerObject)
                     return new("Charlie's Vacation", "Get your original Starfarer back", CharlieStarfarerUnswap_Dialog);
@@ -32,10 +32,16 @@ namespace CharlieStarfarer
         }
         public void CharlieSet()
         {
-            API.SetStarfarer(Main.LocalPlayer, ModContent.GetInstance<Charlie>().CustomStarfarerObject);
+            object Charlie = ModContent.GetInstance<Charlie>().CustomStarfarerObject;
+            if (API.GetCurrentStarfarer(Main.LocalPlayer).Item2 != Charlie)
+                API.ResetPopup(null, () => { }, () => { });
+            API.SetStarfarer(Main.LocalPlayer, Charlie);
         }
         public void CharlieUnset()
         {
+            object Charlie = ModContent.GetInstance<Charlie>().CustomStarfarerObject;
+            if (API.GetCurrentStarfarer(Main.LocalPlayer).Item2 == Charlie)
+                API.ResetPopup(null, () => { }, () => { });
             API.ResetStarfarer(Main.LocalPlayer);
         }
     }
