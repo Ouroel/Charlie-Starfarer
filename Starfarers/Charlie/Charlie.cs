@@ -12,12 +12,14 @@ using Terraria.GameContent;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Terraria;
+using CharlieStarfarer.Starfarers.Charlie.VNs.PerseusDefeated;
 
 namespace CharlieStarfarer.Starfarers.Charlie
 {
     internal class Charlie : StarsAboveStarfarer_Datadriven
     {
         const string Path = "CharlieStarfarer/Starfarers/Charlie/";
+        public override StarsAboveVN_Custom PerseusDefeated => ModContent.GetInstance<PerseusDefeated>();
         static Asset<Texture2D>[] Charlie_StellarNova;
         static Asset<Texture2D> Charlie_Menu_Body;
         static Asset<Texture2D>[] Charlie_Menu_Clothes;
@@ -161,11 +163,6 @@ namespace CharlieStarfarer.Starfarers.Charlie
             if (API.GetShadesOn())
                 SpriteBatch.Draw(Charlie_Dialog_Shades[skin][Expression].Value, Bounds, Color.White);
 
-        }
-
-        public override bool ReplaceVN(Mod VNSourceMod, float VNPriority)
-        {
-            return false;
         }
 
         int GetSkin() {

@@ -8,6 +8,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.UI;
 using static StarsAboveAPI.StarsAboveVN_Custom;
+using System.Linq;
 
 //replace this namespace with your own
 namespace StarsAboveAPI
@@ -18,7 +19,9 @@ namespace StarsAboveAPI
         //Set this in Mod.Load()
         public static Mod YourMod;
         public static Mod StarsAboveAPI { get { if (starsAboveAPI == null) ModLoader.TryGetMod("StarsAboveAPI", out starsAboveAPI); return starsAboveAPI; } }
+        public static Mod StarsAbove { get { if (starsAbove == null) ModLoader.TryGetMod("StarsAbove", out starsAbove); return starsAbove; } }
         private static Mod starsAboveAPI = null;
+        private static Mod starsAbove = null;
 
         /// <summary>
         /// Gets the current starfarer visible attire.
@@ -274,7 +277,7 @@ namespace StarsAboveAPI
             Func<bool, string> MenuOnArchiveConfirmButton = null, //takes in archiveActive
             Func<string> MenuOnArchiveHoverButton = null,
             Func<string> MenuOnConfirmHoverButton = null,
-            Func<string> MenuOnStellarArrayHoverButton = null,
+            Func<bool, string> MenuOnStellarArrayHoverButton = null,
             Func<string> MenuOnStellarArrayConfirmButton = null,
             Func<bool, string> MenuOnStellarNovaHoverButton = null, //takes in unlocked
             Func<string> MenuOnStellarNovaConfirmButton = null,
@@ -397,9 +400,13 @@ namespace StarsAboveAPI
         object[] Dialogue = new object[305];
         object Dialog2_Hardmode;
 
+        object[] HardIdleDialogue_downedVagrant = new object[9];
+
         //It's an array of 305. Look up StarsAboveDialogueSystem to figure out which corresponds to which.
         public virtual Tuple<int, int>[] WeaponDialogDrops => getWeaponDialogDrops();
         Tuple<int, int>[] weaponDialogDrops = null;
+
+        public virtual StarsAboveVN_Custom PerseusDefeated => null;
 
         private Tuple<int, int>[] getWeaponDialogDrops()
         {
@@ -422,7 +429,12 @@ namespace StarsAboveAPI
             return Language.GetTextValue(GetLocalizationPath() + ".StarfarerMenu.MenuOnArchiveConfirmButton_ArchiveNotActive", Main.LocalPlayer.name);
         }
 
-        public override string MenuOnStellarArrayHoverButton => Language.GetTextValue(GetLocalizationPath() + ".StarfarerMenu.MenuOnStellarArrayHoverButton", Main.LocalPlayer.name);
+        public override string MenuOnStellarArrayHoverButton(bool inCombat)
+        {
+            if (inCombat)
+                return Language.GetTextValue(GetLocalizationPath() + ".StarfarerMenu.MenuOnStellarArrayHoverButton_inCombat", Main.LocalPlayer.name);
+            return Language.GetTextValue(GetLocalizationPath() + ".StarfarerMenu.MenuOnStellarArrayHoverButton", Main.LocalPlayer.name);
+        }
         public override string MenuOnStellarArrayConfirmButton => Language.GetTextValue(GetLocalizationPath() + ".StarfarerMenu.MenuOnStellarArrayConfirmButton", Main.LocalPlayer.name);
         public override string MenuOnStellarNovaConfirmButton => Language.GetTextValue(GetLocalizationPath() + ".StarfarerMenu.MenuOnStellarNovaConfirmButton", Main.LocalPlayer.name);
         public override string MenuOnVoyageHoverButton => Language.GetTextValue(GetLocalizationPath() + ".StarfarerMenu.MenuOnVoyageHoverButton", Main.LocalPlayer.name);
@@ -479,6 +491,16 @@ namespace StarsAboveAPI
         public override void SetDefaults()
         {
             Dialog2_Hardmode = GenerateDialog("IdleDialogueHardmode");
+
+            HardIdleDialogue_downedVagrant[0] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue1_downedVagrant", WeaponDialogDrops[12].Item1, WeaponDialogDrops[12].Item2);
+            HardIdleDialogue_downedVagrant[1] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue2_downedVagrant", WeaponDialogDrops[13].Item1, WeaponDialogDrops[13].Item2);
+            HardIdleDialogue_downedVagrant[2] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue3_downedVagrant", WeaponDialogDrops[14].Item1, WeaponDialogDrops[14].Item2);
+            HardIdleDialogue_downedVagrant[3] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue4_downedVagrant", WeaponDialogDrops[15].Item1, WeaponDialogDrops[15].Item2);
+            HardIdleDialogue_downedVagrant[4] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue5_downedVagrant", WeaponDialogDrops[16].Item1, WeaponDialogDrops[16].Item2);
+            HardIdleDialogue_downedVagrant[5] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue6_downedVagrant", WeaponDialogDrops[17].Item1, WeaponDialogDrops[17].Item2);
+            HardIdleDialogue_downedVagrant[6] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue7_downedVagrant", WeaponDialogDrops[18].Item1, WeaponDialogDrops[18].Item2);
+            HardIdleDialogue_downedVagrant[7] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue8_downedVagrant", WeaponDialogDrops[19].Item1, WeaponDialogDrops[19].Item2);
+            HardIdleDialogue_downedVagrant[8] = GenerateDialog("RegularIdleDialogue.HardIdleDialogue9_downedVagrant", WeaponDialogDrops[20].Item1, WeaponDialogDrops[20].Item2);
 
             Dialogue[1] = GenerateDialog("WeaponDialogue", WeaponDialogDrops[1].Item1, WeaponDialogDrops[1].Item2);
             Dialogue[2] = GenerateDialog("IdleDialogue", WeaponDialogDrops[2].Item1, WeaponDialogDrops[2].Item2);
@@ -626,6 +648,20 @@ namespace StarsAboveAPI
         public virtual void CustomDrawExpression_OverUI(SpriteBatch SpriteBatch, int Expression, Rectangle Bounds, Color Alpha)
         {
         }
+        public override bool ReplaceVN(Mod VNSourceMod, float VNPriority)
+        {
+            if (VNSourceMod.Name == "StarsAbove")
+            {
+                switch (VNPriority)
+                {
+                    case 9:
+                    case 10:
+                        API.OpenVN(PerseusDefeated.ID);
+                        return true;
+                }
+            }
+            return false;
+        }
 
         static bool return_false() { return false; }
 
@@ -649,18 +685,47 @@ namespace StarsAboveAPI
                             return true;
                         }
                         break;
+                    case 12:
+                    case 13:
+                    case 14:
+                    case 15:
+                    case 16:
+                    case 17:
+                    case 18:
+                    case 19:
+                    case 20:
+                        if ((bool)API.StarsAbove.Call("downedVagrant") == true)
+                        {
+                            API.ForceOpenSpatialDiskDialogWindow(HardIdleDialogue_downedVagrant[(int)DialogPriority - 12]);
+                            return true;
+                        }
+                        break;
                     case 139:
                         return false; //Perzeus
                 }
-                API.ForceOpenSpatialDiskDialogWindow(Dialogue[(int)DialogPriority]);
-                return true;
+                if (Dialogue[(int)DialogPriority] != null)
+                {
+                    API.ForceOpenSpatialDiskDialogWindow(Dialogue[(int)DialogPriority]);
+                    return true;
+                }
             }
             return false;
         }
 
         public override bool ReplaceExpression(Mod ExpressionSourceMod, string ExpressionText, int ExpressionFace, int ExpressionDuration)
         {
-            string Localization = GetLocalizationPath() + ".Expression." + ExpressionText + ".";
+            string Localization_Pattern = GetLocalizationPath() + ".Expression." + ExpressionText;
+
+            int max = 1;
+            while (Language.Exists(Localization_Pattern + "_" + max + ".Text"))
+            {
+                max++;
+            }
+            int rand = Main.rand.Next(max);
+            if (rand > 0)
+                Localization_Pattern = Localization_Pattern + "_" + rand;
+
+            string Localization = Localization_Pattern + ".";
             string TextPath = Localization + "Text";
             string CustomFacePath = Localization + "Expression";
             string FaceNumber = Language.GetText(CustomFacePath).Value;
@@ -692,8 +757,8 @@ namespace StarsAboveAPI
                 MenuOnArchiveConfirmButton(true) == null ? null : MenuOnArchiveConfirmButton,
                 MenuOnArchiveHoverButton == null ? null : () => MenuOnArchiveHoverButton,
                 MenuOnConfirmHoverButton == null ? null : () => MenuOnConfirmHoverButton,
-                MenuOnStellarArrayHoverButton == null ? null : () => MenuOnStellarArrayHoverButton,
-                MenuOnStellarArrayConfirmButton == null ? null : () => MenuOnStellarArrayHoverButton,
+                MenuOnStellarArrayHoverButton(false) == null ? null : MenuOnStellarArrayHoverButton,
+                MenuOnStellarArrayConfirmButton == null ? null : () => MenuOnStellarArrayConfirmButton,
                 MenuOnStellarNovaHoverButton(true) == null ? null : MenuOnStellarNovaHoverButton,
                 MenuOnStellarNovaConfirmButton == null ? null : () => MenuOnStellarNovaConfirmButton,
                 MenuOnVoyageHoverButton == null ? null : () => MenuOnVoyageHoverButton,
@@ -751,7 +816,7 @@ namespace StarsAboveAPI
         public virtual string MenuOnArchiveConfirmButton(bool archiveActive) { return null; } //takes in archiveActive
         public virtual string MenuOnArchiveHoverButton => null;
         public virtual string MenuOnConfirmHoverButton => null;
-        public virtual string MenuOnStellarArrayHoverButton => null;
+        public virtual string MenuOnStellarArrayHoverButton(bool inCombat) { return null; }
         public virtual string MenuOnStellarArrayConfirmButton => null;
         public virtual string MenuOnStellarNovaHoverButton(bool unlocked) { return null; } //takes in unlocked
         public virtual string MenuOnStellarNovaConfirmButton => null;
@@ -803,6 +868,134 @@ namespace StarsAboveAPI
         }
     }
 
+    public abstract class StarsAboveVN_Datadriven : StarsAboveVN_Custom
+    {
+        GameCulture lastLoadedGameCulture = null;
+
+        string[] dialogOptions;
+
+        VNData[] vnData;
+
+        public struct VNData
+        {
+            public string speaker;
+            public string text;
+            public string char1;
+            public string char2;
+            public int char1pose;
+            public int char2pose;
+            public int char1expression;
+            public int char2expression;
+            public VNData(string text, string speaker, string char1, int char1pose, int char1expression, string char2, int char2pose, int char2expression)
+            {
+                this.speaker = speaker;
+                this.text = text;
+                this.char1 = char1;
+                this.char2 = char2;
+                this.char1pose = char1pose;
+                this.char2pose = char2pose;
+                this.char1expression = char1expression;
+                this.char2expression = char2expression;
+            }
+        }
+
+        public virtual string LocalizationPath => "";
+
+        public virtual int[] DialogOptionVNs => null;
+
+        public void Relocalize()
+        {
+
+            if (lastLoadedGameCulture != GameCulture.DefaultCulture && Language.Exists(LocalizationPath + ".VNText." + 1 + ".Text"))
+            {
+                //Actual Dialog Data
+                int CurrentOptionCount = 1;
+
+                List<VNData> VNData = new();
+
+                while (Language.Exists(LocalizationPath + ".VNText." + CurrentOptionCount + ".Text"))
+                {
+                    string speaker2 = "";
+                    int speaker2Pose = 0;
+                    int speaker2Expression = 0;
+
+                    if (Language.Exists(LocalizationPath + ".VNText." + CurrentOptionCount + ".Speaker2"))
+                    {
+                        speaker2 = Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".Speaker2");
+                        speaker2Pose = int.Parse(Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".Speaker2Pose"));
+                        speaker2Expression = int.Parse(Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".Speaker2Expression"));
+                    }
+
+                    VNData.Add(new(
+                        Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".Text"),
+                        Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".ActiveSpeaker"),
+                        Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".Speaker1"),
+                        int.Parse(Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".Speaker1Pose")),
+                        int.Parse(Language.GetTextValue(LocalizationPath + ".VNText." + CurrentOptionCount + ".Speaker1Expression")),
+                        speaker2,
+                        speaker2Pose,
+                        speaker2Expression
+                        ));
+                    CurrentOptionCount++;
+                }
+
+                if (VNData.Count > 0)
+                    vnData = VNData.ToArray();
+                else
+                    vnData = null;
+
+                //Dialog Options
+                CurrentOptionCount = 1;
+                List<string> DialogOptions = new();
+                while (Language.Exists(LocalizationPath + ".DialogOptions." + CurrentOptionCount + ".Text"))
+                {
+                    DialogOptions.Add(
+                        Language.GetTextValue(LocalizationPath + ".DialogOptions." + CurrentOptionCount + ".Text")
+                        );
+                    CurrentOptionCount++;
+                }
+                if (DialogOptions.Count > 0)
+                    dialogOptions = DialogOptions.ToArray();
+                else
+                    dialogOptions = null;
+
+                lastLoadedGameCulture = GameCulture.DefaultCulture;
+            }
+        }
+
+        public override Tuple<string, int>[] GetDialogOptions()
+        {
+            Relocalize();
+            if (dialogOptions != null)
+            {
+                Tuple<string, int>[] rv = new Tuple<string, int>[dialogOptions.Length];
+                int[] ReturnVNs = GetDialogOptionReturnVN();
+                for (int x = 0; x < dialogOptions.Length; x++)
+                {
+                    rv[x] = new(dialogOptions[x], ReturnVNs[x]);
+                }
+                return rv;
+            }
+            return null;
+        }
+        public override void VNLogic(int stage, ref int sceneLength, ref bool sceneHasChoice, ref string sceneChoice1, ref string sceneChoice2, ref int choice1SceneID, ref int choice2SceneID, ref string character1, ref int character1Pose, ref int character1Expression, ref string character2, ref int character2Pose, ref int character2Expression, ref string speakerName, ref string dialogue)
+        {
+            Relocalize();
+            sceneHasChoice = dialogOptions != null;
+            sceneLength = vnData.Length - 1;
+            if (stage > sceneLength)
+                return;
+            dialogue = Language.GetTextValue(vnData[stage].text, Main.LocalPlayer.name);
+            speakerName = Language.GetTextValue(vnData[stage].speaker);
+            character1 = Language.GetTextValue(vnData[stage].char1);
+            character1Pose = vnData[stage].char1pose;
+            character1Expression = vnData[stage].char1expression;
+            character2 = Language.GetTextValue(vnData[stage].char2);
+            character2Pose = vnData[stage].char2pose;
+            character2Expression = vnData[stage].char2expression;
+
+        }
+    }
     public abstract class StarsAboveVN_Custom : ModType
     {
         public bool AlreadySeen = false;
@@ -810,7 +1003,9 @@ namespace StarsAboveAPI
         public virtual float Priority => 1;
         public virtual DialogOption[] DialogOptions => null;
 
-        Tuple<string, int>[] dialogOptions;
+        string[] dialogOptions;
+
+        public virtual int[] GetDialogOptionReturnVN() { return new int[0]; }
 
         public virtual bool UsesCustomDrawLogic => false;
 
@@ -824,21 +1019,31 @@ namespace StarsAboveAPI
             if (API.StarsAboveAPI == null) return;
             if (API.YourMod == null)
                 API.YourMod = Mod;
-            ID = API.AddModdedVNScene(VNLogic, UsesCustomDrawLogic ? CustomDrawLogic : null, DialogOptions != null ? GetDialogOptions : null, Priority, condition, OnDialogAdvanced, OnOptionPressed);
+            ID = API.AddModdedVNScene(VNLogic, UsesCustomDrawLogic ? CustomDrawLogic : null, GetDialogOptions() != null ? GetDialogOptions : null, Priority, condition, OnDialogAdvanced, OnOptionPressed);
         }
 
-        Tuple<string, int>[] GetDialogOptions()
+        public virtual Tuple<string, int>[] GetDialogOptions()
         {
-            if (dialogOptions == null)
+            DialogOption[] orig = DialogOptions;
+            if (dialogOptions == null && orig.Length > 0)
             {
-                DialogOption[] orig = DialogOptions;
-                dialogOptions = new Tuple<string, int>[orig.Length];
+                dialogOptions = new string[orig.Length];
                 for (int x = 0; x < orig.Length; x++)
                 {
-                    dialogOptions[x] = new(orig[x].Text, orig[x].VNSceneID);
+                    dialogOptions[x] = orig[x].Text;
                 }
             }
-            return dialogOptions;
+            if (dialogOptions.Length > 0)
+            {
+                Tuple<string, int>[] rv = new Tuple<string, int>[dialogOptions.Length];
+                int[] ReturnVNs = GetDialogOptionReturnVN();
+                for (int x = 0; x < dialogOptions.Length; x++)
+                {
+                    rv[x] = new(dialogOptions[x], ReturnVNs[x]);
+                }
+                return rv;
+            }
+            return null;
         }
 
         bool condition()

@@ -3,6 +3,7 @@ using StarsAboveAPI;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using CharlieStarfarer.Starfarers.Charlie.VNs.PerseusDefeated;
 
 namespace CharlieStarfarer
 {
@@ -21,6 +22,10 @@ namespace CharlieStarfarer
                 if (API.GetCurrentStarfarer(Main.LocalPlayer).Item2 == ModContent.GetInstance<Charlie>().CustomStarfarerObject)
                     return new("Charlie's Vacation", "Get your original Starfarer back", CharlieStarfarerUnswap_Dialog);
                 return new("Charlie's Apotheosis", "Switch your Starfarer to Charlie", CharlieStarfarerSwap_Dialog);
+            });
+
+            API.AddSpatialDiskDialogArchive(2, 0.12111111f, () => {
+                return new("Test", "test", ModContent.GetInstance<PerseusDefeated>().ID);
             });
 
             //temp parser 

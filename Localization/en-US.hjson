@@ -4,45 +4,48 @@
 			Charlie: {
 				StarfarerMenu: {
 					//{0} is the player's name
-					MenuOnArchiveHoverButton: MenuOnArchiveHoverButton
-					MenuOnConfirmHoverButton: MenuOnConfirmHoverButton
-					MenuOnArchiveConfirmButton_ArchiveActive: MenuOnArchiveConfirmButton_ArchiveActive
-					MenuOnArchiveConfirmButton_ArchiveNotActive: MenuOnArchiveConfirmButton_ArchiveNotActive
-					MenuOnStellarArrayHoverButton: MenuOnStellarArrayHoverButton
-					MenuOnStellarArrayConfirmButton: MenuOnStellarArrayConfirmButton
-					MenuOnStellarNovaConfirmButton: MenuOnStellarNovaConfirmButton
-					MenuOnVoyageHoverButton: MenuOnVoyageHoverButton
-					MenuOnArmorSlotHover: MenuOnArmorSlotHover
-					MenuOnVanitySlotHover: MenuOnVanitySlotHover
-					MenuOnStellarNovaHoverButton: MenuOnStellarNovaHoverButton
-					MenuOnStellarNovaHoverButton_Locked: MenuOnStellarNovaHoverButton_Locked
+					MenuOnArchiveHoverButton: Their power allows us to revisit the past.
+					MenuOnConfirmHoverButton: I guess you are done already.
+					MenuOnArchiveConfirmButton_ArchiveActive: I presume that is enough scrying into the past.
+					MenuOnArchiveConfirmButton_ArchiveNotActive: Let's ask Them for a reminder, shall we?
+					MenuOnStellarArrayHoverButton: The "Stellar Array". One of the so-called "powers" of the Starfarers. They are nothing to me.
+					MenuOnStellarArrayHoverButton_inCombat: They will not allow you to modify the Stellar Array right now.
+					MenuOnStellarArrayConfirmButton: I suppose this is the configuration you desire?
+					MenuOnStellarNovaConfirmButton: The powers we purloined from our enemies...
+					MenuOnVoyageHoverButton: They will not let us use it. Yet.
+					MenuOnArmorSlotHover: Weave clothing through spools and They will shroud you in Their power.
+					MenuOnVanitySlotHover: They have power beyond your comprehension. To Them, looks are ever-deceiving.
+					MenuOnStellarNovaHoverButton: Nothing compared to the power They offer.
+					MenuOnStellarNovaHoverButton_Locked: They told me...we need to hunt down someone named "Perseus".
 
-					MenuOnOpen: MenuOnOpen
-					MenuOnOpen_InCombat: MenuOnOpen_InCombat {1} seconds
+					MenuOnOpen: You were expecting...someone else, {0}?
+					MenuOnOpen_InCombat: Go defeat the threats first. Or don't.
+				}
+				StellarArrayMenu: {
 				}
 				StellarNovaMenu:
 				{
-					NovaOnAffix1Hover: NovaOnAffix1Hover
-					NovaOnAffix2Hover: NovaOnAffix2Hover
-					NovaOnAffix3Hover: NovaOnAffix3Hover
-					NovaOnConfirmHover: NovaOnConfirmHover
-					NovaOnResetHover: NovaOnResetHover
-					NovaSpecialAffixHover: NovaSpecialAffixHover
+					NovaOnAffix1Hover: Offer Stellar Prisms to Them here to purloin more of Their power. You can offer Tier 3 Stellar Prisms here.
+					NovaOnAffix2Hover: Offer Stellar Prisms to Them here to purloin more of Their power.
+					NovaOnAffix3Hover: Offer Stellar Prisms to Them here to purloin more of Their power.
+					NovaOnConfirmHover: I see. So this is what you desire.
+					NovaOnResetHover: Perhaps a reset is in order?
+					NovaSpecialAffixHover: An affix slot which alters the Stellar Nova entirely. Quite like what you could weave with spools.
 
-					EdinGenesisQuasar_Locked: EdinGenesisQuasar_Locked
-					EdinGenesisQuasar_Unlocked: EdinGenesisQuasar_Unlocked
+					EdinGenesisQuasar_Locked: Go slaughter Alter's Cultist if you desire this.
+					EdinGenesisQuasar_Unlocked: Strikes unstoppable...
 
-					GardenOfAvalon_Locked: GardenOfAvalon_Locked
-					GardenOfAvalon_Unlocked: GardenOfAvalon_Unlocked
+					GardenOfAvalon_Locked: Go slaughter Penthesilea if you desire this.
+					GardenOfAvalon_Unlocked: To be as invincible as the Fuelweaver himself...
 
-					KiwamiRyuken_Locked: KiwamiRyuken_Locked
-					KiwamiRyuken_Unlocked: KiwamiRyuken_Unlocked
+					KiwamiRyuken_Locked: Go slaughter Arbitration if you desire this.
+					KiwamiRyuken_Unlocked: None will dare to strike you.
 
-					Laevateinn_Locked: Laevateinn_Locked
-					Laevateinn_Unlocked: Laevateinn_Unlocked
+					Laevateinn_Locked: Go slaughter the Burnished King if you desire this.
+					Laevateinn_Unlocked: Spinning blade of doom...
 
-					Theofania_Locked: Theofania_Locked
-					Theofania_Unlocked: Theofania_Unlocked
+					Theofania_Locked: Go slaughter Perseus if you desire this.
+					Theofania_Unlocked: Strength of the void...
 				}
 				Dialog: {
 					WeaponDialogue: {
@@ -440,384 +443,814 @@
 					RegularIdleDialogue: {
 						NormalIdleDialogue1: {	
 							1: {
-								Text: Here is some text (1)
-								Expression: 0
+								Text: ♪ I don't believe in ghosts ♫
+								Expression: 6
 							}
 							2: {
-								Text: Here is some text (1)
-								Expression: 1
+								Text: ♫ They don't give me a fright ♫
+								Expression: 0
 							}
 							3: {
-								Text: Here is some text (2)
-								Expression: 2
-							}
-							4: {
-								Text: Here is some text (3)
+								Text: ♫ I don't believe in anything that bumpity-bumps in the night ♪
 								Expression: 3
-							}
-							5: {
-								Text: Here is some text (3)
-								Expression: 4
-							}
-							6: {
-								Text: Here is some text (3)
-								Expression: 5
-							}
-							7: {
-								Text: Here is some text (3)
-								Expression: 6
 							}
 						}
 						NormalIdleDialogue2: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Say, {0}, you don't look so good
+								Expression: 5
+							}
+							2: {
+								Text: You better find something to eat before, you know...
+								Expression: 3
+							}
+							2: {
+								Text: ...nightfall comes!
+								Expression: 2
 							}
 						}
 						NormalIdleDialogue3: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Weapons?
+								Expression: 4
+							}
+							2: {
+								Text: There's no weapon scarier than the dark!
+								Expression: 3
+							}
+							3: {
+								Text: Hisss~~~
+								Expression: 6
 							}
 						}
 						NormalIdleDialogue4: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Starfarers? What do you need them for?
+								Expression: 5
+							}
+							2: {
+								Text: I'm the literal Queen of Darkness!
+								Expression: 3
+							}
+							3: {
+								Text: There's nothing a starfarer can do that They cannot!
+								Expression: 6
 							}
 						}
 						NormalIdleDialogue5: {	
 							1: {
-								Text: Here is some text
+								Text: This "Stellar Array" thing is intriguing.
 								Expression: 0
+							}
+							2: {
+								Text: Nothing I can't do, though.
+								Expression: 3
 							}
 						}
 						NormalIdleDialogue6: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Where's Maxy, {0}?
+								Expression: 4
+							}
+							2: {
+								Text: Never mind.
+								Expression: 6
 							}
 						}
 						NormalIdleDialogue7: {	
 							1: {
-								Text: Here is some text
+								Text: You know, I've been thinking of a weapon.
 								Expression: 0
+							}
+							2: {
+								Text: It's like a thurible you hold in your hands, that err...
+								Expression: 4
+							}
+							3: {
+								Text: ...attracts a spooky skeleton to you?
+								Expression: 1
+							}
+							4: {
+								Text: Eh, sounds pretty useless anyway.
+								Expression: 5
 							}
 						}
 						NormalIdleDialogue8: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: These townsfolk, they remind me of that one guy back home.
+								Expression: 1
+							}
+							2: {
+								Text: His name was Witherstone. He was a usurious bastard. Maxy was lucky to get off his heels!
+								Expression: 2
+							}
+							3: {
+								Text: Though I wonder what would become of me if Maxy never found that book...
+								Expression: 4
 							}
 						}
 						NormalIdleDialogue9: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Starfarers have something called a "Stellar Array"?
+								Expression: 4
+							}
+							2: {
+								Text: Nothing They can't do!
+								Expression: 3
 							}
 						}
 						HardIdleDialogue1: {	
 							1: {
-								Text: Here is some text
+								Text: It feels good to be invigorated by the spirit of Them!
+								Expression: 3
+							}
+							2: {
+								Text: Though I supposed Their freedom might have made things harder...for you, {0}.
+								Expression: 6
+							}
+							3: {
+								Text: Best get a bunch of shadow servants to gather some resources! Maybe spruce up that town a little bit...it's getting a lil' cramped!
 								Expression: 0
+							}
+							4: {
+								Text: Bet we can kill the Twins of Terror next, {0}? Maybe the Mechanical Pugalisk? How about the Ancient Fuelweaver?
+								Expression: 6
+							}
+						}
+						HardIdleDialogue1_downedVagrant: {	
+							1: {
+								Text: This "Stellar Nova" thing is invigorating!
+								Expression: 3
+							}
+							2: {
+								Text: Though I doubt it's invigorating enough for you, {0}.
+								Expression: 6
+							}
+							3: {
+								Text: Best get a bunch of shadow servants to gather some resources! Maybe spruce up that town a little bit...it's getting a lil' cramped!
+								Expression: 0
+							}
+							4: {
+								Text: Bet we can kill the Twins of Terror next, {0}? Maybe the Mechanical Pugalisk? How about the Ancient Fuelweaver?
+								Expression: 6
 							}
 						}
 						HardIdleDialogue2: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: These Stellar Novas are child's play to a child of Them!
+								Expression: 3
+							}
+						}
+						HardIdleDialogue2_downedVagrant: {	
+							1: {
+								Text: Don't anybody interrupt my puppet show!
+								Expression: 1
+							}
+							2: {
+								Text: Lest they face the wrath of my puppet hands...
+								Expression: 2
+							}
+							3: {
+								Text: It's a nice show, too! It's Maxy performing his little puppet performance!
+								Expression: 5
 							}
 						}
 						HardIdleDialogue3: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: I wonder how Maxy is doing?
+								Expression: 4
+							}
+						}
+						HardIdleDialogue3_downedVagrant: {	
+							1: {
+								Text: I wonder how Maxy is doing?
+								Expression: 4
 							}
 						}
 						HardIdleDialogue4: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Hmm...I would prefer a suit of, you know, night armor...
+								Expression: 6
+							}
+							2: {
+								Text: An enchanted top hat would look nice, too...
+								Expression: 4
+							}
+							3: {
+								Text: Don't forget a sword of absolute darkness!
+								Expression: 3
+							}
+							4: {
+								Text: Oh, wait, that's just the Night's Edge...
+								Expression: 5
+							}
+						}
+						HardIdleDialogue4_downedVagrant: {	
+							1: {
+								Text: Hmm...I would prefer a suit of, you know, the Ancient Fuelweaver's remains...
+								Expression: 6
+							}
+							2: {
+								Text: A helm made of his skull would look nice, too...
+								Expression: 4
+							}
+							3: {
+								Text: Don't forget the little thurible thing I spoke of before!
+								Expression: 3
+							}
+							4: {
+								Text: Oh, wait, you ain't Maxy...
+								Expression: 1
 							}
 						}
 						HardIdleDialogue5: {	
 							1: {
-								Text: Here is some text
+								Text: You know, I'm gathering a bunch of chess pieces...
+								Expression: 4
+							}
+							2: {
+								Text: You seem like a king. A perfect fit for the queen...
+								Expression: 6
+							}
+							3: {
+								Text: ...which is me, of course.
+								Expression: 3
+							}
+						}
+						HardIdleDialogue5_downedVagrant: {	
+							1: {
+								Text: You know, I'm gathering a bunch of chess pieces...
+								Expression: 4
+							}
+							2: {
+								Text: You seem like a king. A perfect fit for the queen...
+								Expression: 6
+							}
+							3: {
+								Text: ...which is me, of course.
+								Expression: 3
+							}
+						}
+						HardIdleDialogue6: {
+							1: {
+								Text: You are getting pretty strong, {0}!
+								Expression: 6
+							}
+							2: {
+								Text: Though you will never match the might of Them!
+								Expression: 3
+							}
+							3: {
+								Text: Don't even try.
 								Expression: 0
 							}
 						}
-						HardIdleDialogue6: {	
+						HardIdleDialogue6_downedVagrant: {
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: You are getting very strong, {0}!
+								Expression: 6
+							}
+							2: {
+								Text: Though I'm always stronger, of course.
+								Expression: 3
+							}
+							3: {
+								Text: I am, after all, the Queen of the Constant.
+								Expression: 6
+							}
+							4: {
+								Text: I control everything.
+								Expression: 2
 							}
 						}
 						HardIdleDialogue7: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: I know who came up with these monsters. It's Wortox.
+								Expression: 3
+							}
+							2: {
+								Text: Damned imp keeps screwing over with every reality...
+								Expression: 2
+							}
+						}
+						HardIdleDialogue7_downedVagrant: {	
+							1: {
+								Text: I know who came up with these monsters. It's Wortox.
+								Expression: 3
+							}
+							2: {
+								Text: Damned imp keeps screwing over with every reality...
+								Expression: 2
 							}
 						}
 						HardIdleDialogue8: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: I hate the Hallow. It's way too bright for my tastes.
+								Expression: 2
+							}
+						}
+						HardIdleDialogue8_downedVagrant: {	
+							1: {
+								Text: I hate the Hallow. It's way too bright for my tastes.
+								Expression: 2
 							}
 						}
 						HardIdleDialogue9: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: So this is what is within that Terrarium...
+								Expression: 4
+							}
+						}
+						HardIdleDialogue9_downedVagrant: {	
+							1: {
+								Text: I wonder how far we will go...
+								Expression: 3
 							}
 						}
 						LightIdleDialogue: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: This is even worse than when Alter shrouded the world in her disgusting light!
+								Expression: 1
+							}
+							2: {
+								Text: I can't even do my little ~~HISSssS~~ thing!
+								Expression: 2
 							}
 						}
 					}
 					BossDialogue: {
 						KingSlime: {	
 							1: {
-								Text: Here is some text
+								Text: What a pathetic little slime thing.
+								Expression: 1
+							}
+							2: {
+								Text: Anyway, They find it fitting to reward you with a new section of the Stellar Array.
 								Expression: 0
 							}
 						}
 						CthulhuEye: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: This pathetic eye? Looks like that thing Wortox brought back to the Constant.
+								Expression: 1
+							}
+							2: {
+								Text: Go wear that eye mask or something. Feed it with monster meat. Blah, blah blah...
+								Expression: 5
+							}
+							2: {
+								Text: Almost forgot the Stellar Array...
+								Expression: 1
 							}
 						}
 						CorruptionBoss: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: That was just a giant Depths Worm!
+								Expression: 2
+							}
+							2: {
+								Text: What a pathetic little thing...
+								Expression: 1
+							}
+							3: {
+								Text: If They find it fit to lock part of the Stellar Array behind such a pathetic creature...
+								Expression: 2
 							}
 						}
 						QueenBee: {	
 							1: {
-								Text: Here is some text
+								Text: ♪ Dun~~~ dududu-dun~ du du du~dudududu dun! ♫
+								Expression: 3
+							}
+							2: {
+								Text: ♫ Dun~~~ dududu-dun~ du du du~Du du~Du du~Du du~Du! ♫
+								Expression: 6
+							}
+							3: {
+								Text: ♫ hu~Hu hu~Hu hu~Huu ♪
+								Expression: 3
+							}
+							4: {
+								Text: AaaR! AaaR!
+								Expression: 2
+							}
+							5: {
+								Text: Bzzzzt.....
+								Expression: 6
+							}
+							6: {
+								Text: Anyway, here's some royal jelly for your trouble. Go cook it into jellybeans!
 								Expression: 0
+							}
+							7: {
+								Text: ...and the Stellar Array.
+								Expression: 5
 							}
 						}
 						Skeletron: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: All that little woven shadows can't save that pathetic skeleton!
+								Expression: 3
+							}
+							2: {
+								Text: What did you mean it was someone named "Skeletron"?
+								Expression: 4
+							}
+							3: {
+								Text: You mean that wasn't the Fuelweaver?
+								Expression: 1
+							}
+							4: {
+								Text: ...fine. Have your Stellar Array nonsense.
+								Expression: 5
 							}
 						}
 						WallOfFlesh: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Oooh, this one is actually spooky!
+								Expression: 4
+							}
+							2: {
+								Text: Gotta give Wortox credit for that!
+								Expression: 6
+							}
+							3: {
+								Text: Finally! Something worthy of actually having the Stellar Array locked behind!
+								Expression: 3
 							}
 						}
 						Twins: {	
 							1: {
-								Text: Here is some text
+								Text: Wortox? Did you think two of those is more of a fight than one?
+								Expression: 1
+							}
+							2: {
+								Text: No, you mischievious imp. It most certainly is not!
+								Expression: 3
+							}
+							3: {
+								Text: Anyway, here's a Stellar Array. Also, make sure to feed your Shield of Terror with Monster Meat!
 								Expression: 0
 							}
 						}
 						Destroyer: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: This. Is just an Ancient Sentrypede.
+								Expression: 1
+							}
+							2: {
+								Text: Though I must admit, they gave me quite some trouble in the Archives...
+								Expression: 6
+							}
+							3: {
+								Text: Here's a new Stellar Array upgrade.
+								Expression: 3
 							}
 						}
 						SkeletronPrime: {	
 							1: {
-								Text: Here is some text
+								Text: They have mechanical Fuelweavers?
+								Expression: 4
+							}
+							2: {
+								Text: Interesting...
+								Expression: 3
+							}
+							3: {
+								Text: Oh, your Stellar Array. Here, {0}.
 								Expression: 0
 							}
 						}
 						AllMechs: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: We beat the trio! Ancient Fuelweaver, Sentrypede, and Twins of Terror!
+								Expression: 6
+							}
+							2: {
+								Text: Another Stellar Array upgrade unlocked!
+								Expression: 3
 							}
 						}
 						Plantera: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Lureplants are that dangerous?
+								Expression: 4
+							}
+							2: {
+								Text: Never thought about it, you know. Usually, Maxy just leave them on a boat to pick the leafy meat from them.
+								Expression: 4
+							}
+							3: {
+								Text: Seems to leave a new Stellar Array behind, too...
+								Expression: 4
 							}
 						}
 						Golem: {	
 							1: {
-								Text: Here is some text
+								Text: I wonder how Swinesbury is doing?
+								Expression: 4
+							}
+							2: {
+								Text: They had something like this, once. A mechanical creature, which shot flames at whoever dares approach.
 								Expression: 0
+							}
+							3: {
+								Text: It's all in pieces now, though. Just like this "Golem".
+								Expression: 3
+							}
+							4: {
+								Text: Right. Stellar Array.
+								Expression: 5
 							}
 						}
 						DukeFishron: {	
 							1: {
-								Text: Here is some text
+								Text: Wortox sure has an active imagination.
+								Expression: 4
+							}
+							2: {
+								Text: Maxy's is better, though.
+								Expression: 3
+							}
+							3: {
+								Text: Here's a Stellar Array upgrade. You earned it.
 								Expression: 0
 							}
 						}
 						Cultist: {	
 							1: {
-								Text: Here is some text
+								Text: Urgh, what a lunatic. Worshiping Alter? What a loony loon.
+								Expression: 1
+							}
+							2: {
+								Text: I want a dark world, not a bright world!
+								Expression: 1
+							}
+							3: {
+								Text: Anyway, here's an upgrade to the Stellar Array. 
 								Expression: 0
 							}
 						}
 						MoonLord: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Good riddance, Alter!
+								Expression: 2
+							}
+							2: {
+								Text: No more of your "full moon" nonsense to stop me from attacking whoever I want!
+								Expression: 1
+							}
+							3: {
+								Text: ~~~Hiss~~~ssssss!
+								Expression: 2
+							}
+							4: {
+								Text: ...you are still here? Take your Stellar Array upgrade and go, {0}.
+								Expression: 5
 							}
 						}
 						WarriorOfLight: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: You are worse than Alter! Flooding the whole world with light? All the time?
+								Expression: 3
+							}
+							2: {
+								Text: Not that it can stop us! We beat you, light!
+								Expression: 3
+							}
+							3: {
+								Text: I'm going to hiss whenever I like! Hiss~~hiss~~~~~!
+								Expression: 3
+							}
+							4: {
+								Text: Ahem. Thank you for saving me, brave pawn! Your queen shall thank you with an upgrade to the Stellar Array!
+								Expression: 6
 							}
 						}
 						AllVanillaBosses: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: No creature can stand against the Queen of Darkness!
+								Expression: 3
+							}
+							2: {
+								Text: Have a Stellar Array upgrade. For your trouble.
+								Expression: 6
 							}
 						}
 						VanillaAndWarrior: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Finally.
+								Expression: 5
+							}
+							2: {
+								Text: Now I can go back to doing the ~hiss~~hiss~ thing! 
+								Expression: 3
+							}
+							3: {
+								Text: Urgh. Take your Stellar Array upgrade. 
+								Expression: 1
 							}
 						}
 						Vagrant: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: What an annoying little fellow.
+								Expression: 1
 							}
 						}
 						Nalhaun: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: What an interesting sword! I wonder if we could...
+								Expression: 4
+							}
+							2: {
+								Text: ...use it to cleave our enemies in twain?
+								Expression: 3
 							}
 						}
 						Penth: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: She could have painted us a new poster!
+								Expression: 4
+							}
+							2: {
+								Text: ...but no, she had to be an enemy...
+								Expression: 2
+							}
+							3: {
+								Text: ...guess They will have her, now.
+								Expression: 3
 							}
 						}
 						Arbitration: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Another arrogant, deceitful creature brought low by Them
+								Expression: 3
+							}
+							2: {
+								Text: They have rewarded you with a new Stellar Nova for your efforts!
+								Expression: 6
 							}
 						}
 						Tsukiyomi: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: What an annoying...you love her, don't you?
+								Expression: 1
+							}
+							2: {
+								Text: Anyway, here's the little essence she meant to gave you. There's a message, too...
+								Expression: 4
+							}
+							3: {
+								Text: "Dear {0}, thank you for existing within my life. Here's a little essence for you. XOXO, your waifu, Tsukiyomi."
+								Expression: 1
+							}
+							4: {
+								Text: The audacity of that...
+								Expression: 2
 							}
 						}
 						QueenSlime: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: I used to like sparkles.
+								Expression: 4
+							}
+							2: {
+								Text: Not anymore, though.
+								Expression: 3
 							}
 						}
 						EmpressOfLight: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: ...all that light...she makes me want to hurl... ~~hissssss~~
+								Expression: 1
+							}
+							2: {
+								Text: She should take that cursed light and shove it up herself!
+								Expression: 2
 							}
 						}
 						Deerclops: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Finally. A real challenge! Not like the other ones we faced.
+								Expression: 3
 							}
 						}
 					}
 					CalamityBossDialogue: {
 						DesertScourge: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Ooh, spooky sandworm. As if we haven't seen worse before.
+								Expression: 4
 							}
 						}
 						Crabulon: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: I can't stand to be near that...thing...it was guarding. Please do not winch it up.
+								Expression: 1
 							}
 						}
 						HiveMind: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: That was a beautiful specimen.
+								Expression: 6
+							}
+							2: {
+								Text: A shame it had to go...
+								Expression: 1
 							}
 						}
 						Perforators: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: That was a beautiful specimen.
+								Expression: 6
+							}
+							2: {
+								Text: A shame it had to go...
+								Expression: 1
 							}
 						}
 						SlimeGod: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Urgh. Slimy is not dapper.
+								Expression: 1
 							}
 						}
 						Cryogen: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: The winters in the Constant are honestly worse. If you stay too long, Deerclops will...
+								Expression: 3
+							}
+							2: {
+								Text: What do you mean Deerclops is here too?
+								Expression: 1
 							}
 						}
 						AquaticScourge: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: That's just the worm thing, but underwater!
+								Expression: 1
 							}
 						}
 						BrimstoneElemental: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Now, I know, flames aren't my thing, but I love a little fiery inferno.
+								Expression: 3
 							}
 						}
 						Calamitas: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: She is a dapp...
+								Expression: 3
+							}
+							2: {
+								Text: ...wait, I thought I saw a woman
+								Expression: 1
 							}
 						}
 						Leviathan: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: We should have something like that Leviathan in the Constant!
+								Expression: 4
+							}
+							2: {
+								Text: I can be Anahita, and Maxy can be...
+								Expression: 6
 							}
 						}
 						AstrumAureus: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: The "Astral Infection"? We really should have something like that in the Constant!
+								Expression: 4
+							}
+							2: {
+								Text: Give the survivors more pain and suffering...
+								Expression: 3
 							}
 						}
 						PlaguebringerGoliath: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Hmm...some notes to upgrade my Bee Queen...with a bunch of toxic chemicals!
+								Expression: 4
+							}
+							1: {
+								Text: Perhaps released if they play a flute, huh?
+								Expression: 3
 							}
 						}
 						Ravager: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Now, that's something I should add to the Ruins!
+								Expression: 3
+							}
+							2: {
+								Text: Would definitely spruce things up, that's for sure!
+								Expression: 3
 							}
 						}
 						AstrumDeus: {	
 							1: {
-								Text: Here is some text
-								Expression: 0
+								Text: Hmm...a new thing to terrorize the inhabitants of Swinesbury?
+								Expression: 4
 							}
 						}
 					}
@@ -850,1064 +1283,838 @@
 				}
 				Expression: {	
 					Tsukiyomi1: {
-						Text: Here is some text
-						Expression: 0
+						Text: Urgh, this...pretender! The nerve of her to flirt with you!
+						Expression: 1
 					}
 					onPoison: {
-						Text: Here is some text
-						Expression: 0
+						Text: Welp, this is gonna be painful! Best get a little poison dartfrog leg and make some antipoison!
+						Expression: 3
 					}
 					onIchor: {
-						Text: Here is some text
-						Expression: 0
+						Text: This. Is the least dapper thing I have ever seen. Urgh.
+						Expression: 1
 					}
 					onSilence: {
-						Text: Here is some text
-						Expression: 0
+						Text: mmph! mmph!
+						Expression: 1
 					}
 					onCurse: {
-						Text: Here is some text
-						Expression: 0
+						Text: Being a shadow creature is enough of a curse for me, honestly.
+						Expression: 3
 					}
 					onFrozen: {
-						Text: Here is some text
-						Expression: 0
+						Text: So now you know how Pearl's boyfriend feels when the survivors freeze him to death.
+						Expression: 1
 					}
 					onFrostburn: {
-						Text: Here is some text
-						Expression: 0
+						Text: Hmm...something Deerclops could inflict...
+						Expression: 4
 					}
 					onWebbed: {
-						Text: Here is some text
-						Expression: 0
+						Text: Too bad you don't have Abigail! Would make quick work of the...you do?
+						Expression: 3
 					}
 					onStoned: {
-						Text: Here is some text
-						Expression: 0
+						Text: They have Pugalisks here?
+						Expression: 4
 					}
 					onBurning: {
-						Text: Here is some text
-						Expression: 0
+						Text: Next time, stop standing so close to the lava pools!
+						Expression: 1
 					}
 					onSuffocation: {
-						Text: Here is some text
-						Expression: 0
+						Text: That is the most dapper individual I have ever seen. Just look at your face, {0}!
+						Expression: 6
 					}
 					onFire: {
-						Text: Here is some text
-						Expression: 0
+						Text: Dragonfly sure is annoying, huh?
+						Expression: 4
 					}
 					onDrowning: {
-						Text: Here is some text
-						Expression: 0
+						Text: Well, on the upside, at least you aren't a robot?
+						Expression: 6
 					}
 					onBleeding: {
-						Text: Here is some text
-						Expression: 0
+						Text: Best patch it up with spider glands.
+						Expression: 6
 					}
 					onConfusion: {
-						Text: Here is some text
-						Expression: 0
+						Text: Who? Where?
+						Expression: 4
 					}
 					onKillCritter: {
-						Text: Here is some text
-						Expression: 0
+						Text: Careful, Krampus might come!
+						Expression: 3
+					}
+					onKillCritter_1: {
+						Text: The naughty ones get Krampus in their bases!
+						Expression: 6
+					}
+					onKillCritter_2: {
+						Text: Hehe, here comes Krampy!
+						Expression: 3
 					}
 					onKillEnemy: {
-						Text: Here is some text
+						Text: That was some great kiting!
+						Expression: 6
+					}
+					onKillEnemy_1: {
+						Text: Heh.
+						Expression: 3
+					}
+					onKillEnemy_2: {
+						Text: Now, that was too easy.
+						Expression: 3
+					}
+					onKillEnemy_3: {
+						Text: That was just a pathetic smidgen on your boot!
+						Expression: 6
+					}
+					onKillEnemy_4: {
+						Text: Wortox, is that all you got?
+						Expression: 3
+					}
+					onKillEnemy_5: {
+						Text: I've seen worse in the Constant.
+						Expression: 3
+					}
+					onKillEnemy_6: {
+						Text: An annoying obstacle.
+						Expression: 1
+					}
+					onKillEnemy_7: {
+						Text: Can this get any easier?
+						Expression: 3
+					}
+					onKillEnemy_8: {
+						Text: This is too absurdly easy!
+						Expression: 6
+					}
+					onKillEnemy_9: {
+						Text: That little slicy-dicey...it feels so good!
+						Expression: 3
+					}
+					onKillEnemy_10: {
+						Text: When will we face an actual challenge?
+						Expression: 5
+					}
+					onKillEnemy_11: {
+						Text: Bet your little star-fare-rs can't do that!
+						Expression: 3
+					}
+					onKillEnemy_12: {
+						Text: Bet you won't be able to do it with Asphodene, or Eridani.
+						Expression: 3
+					}
+					onKillEnemy_13: {
+						Text: Anything harder, Wortox?
+						Expression: 3
+					}
+					onKillEnemy_14: {
+						Text: Keep yourself dapper. Don't get blood on your clothes.
 						Expression: 0
 					}
 					onKillEnemyDanger: {
-						Text: Here is some text
-						Expression: 0
+						Text: How close was that?
+						Expression: 4
+					}
+					onKillEnemyDanger_1: {
+						Text: Were you seriously about to die to...that?
+						Expression: 2
+					}
+					onKillEnemyDanger_2: {
+						Text: How did that pathetic thing...almost kill you?
+						Expression: 1
 					}
 					onKillBossEnemy: {
-						Text: Here is some text
-						Expression: 0
+						Text: Boom! ~~and it's dead!
+						Expression: 6
+					}
+					onKillBossEnemy_1: {
+						Text: Deader than dead.
+						Expression: 3
+					}
+					onKillBossEnemy_2: {
+						Text: A pathetic smudge on our ledger.
+						Expression: 6
+					}
+					onKillBossEnemy_3: {
+						Text: Nothing compared to Them.
+						Expression: 3
+					}
+					onKillBossEnemy_4: {
+						Text: Monstrous size brings no intrinsic merit, unless inordinate exsanguination be considered a virtue.
+						Expression: 6
 					}
 					onCrit: {
-						Text: Here is some text
+						Text: A critically-induced wound!
+						Expression: 3
+					}
+					onCrit_1: {
+						Text: Their weak point, eviscerated!
+						Expression: 6
+					}
+					onCrit_2: {
+						Text: They can't recover from that strike.
 						Expression: 0
+					}
+					onCrit_3: {
+						Text: How can they stand after that?
+						Expression: 4
+					}
+					onCrit_4: {
+						Text: Gratuitous size brings only inordinate exsanguination!
+						Expression: 3
+					}
+					onCrit_5: {
+						Text: Ah, the sound of blood spilt.
+						Expression: 4
 					}
 					onTakeHeavyDamage: {
-						Text: Here is some text
-						Expression: 0
+						Text: Do remember to kite, {0}.
+						Expression: 6
+					}
+					onTakeHeavyDamage_1: {
+						Text: Are you serious? Focus!
+						Expression: 2
+					}
+					onTakeHeavyDamage_2: {
+						Text: Oh, they really are going to get it now...
+						Expression: 2
+					}
+					onTakeHeavyDamage_3: {
+						Text: Nothing a bit of spider gland can't fix.
+						Expression: 1
+					}
+					onTakeHeavyDamage_4: {
+						Text: Just eat a pierogi after this one.
+						Expression: 1
+					}
+					onTakeHeavyDamage_5: {
+						Text: Next time, wear Night Armor.
+						Expression: 1
+					}
+					onTakeHeavyDamage_6: {
+						Text: You should have kited better, {0}
+						Expression: 3
 					}
 					onDeath: {
-						Text: Here is some text
-						Expression: 0
+						Text: Next time, Don't Starve.
+						Expression: 3
+					}
+					onDeath_1: {
+						Text: The name of the game is to Don't Starve, but you died to something else anyway. Probably.
+						Expression: 3
+					}
+					onDeath_2: {
+						Text: A Wes would have survived that, and lived to tell the tale.
+						Expression: 1
 					}
 					onUnknownBoss: {
-						Text: Here is some text
-						Expression: 0
+						Text: Oooooh, scary thing. Makes me all a-quiver.
+						Expression: 3
+					}
+					onUnknownBoss_1: {
+						Text: I've seen scarier from the Constant.
+						Expression: 3
+					}
+					onUnknownBoss_2: {
+						Text: This is an absolute insult to Gigantoenesis, Wortox!
+						Expression: 2
+					}
+					onUnknownBoss_3: {
+						Text: Wortox, we know this isn't the best you have to offer.
+						Expression: 1
+					}
+					onUnknownBoss_4: {
+						Text: That was simply pathetic, Wortox. Send a stronger creature!
+						Expression: 3
+					}
+					onUnknownBoss_5: {
+						Text: I am certain this will be as easy as rosemary!
+						Expression: 6
 					}
 					onEyeOfCthulhu: {
-						Text: Here is some text
-						Expression: 0
+						Text: Eye of Terror? That's the easiest boss in the game!
+						Expression: 1
 					}
 					onKingSlime: {
-						Text: Here is some text
-						Expression: 0
+						Text: How is a boss somehow easier than the Eye of Terror?
+						Expression: 4
 					}
 					onEaterOfWorlds: {
-						Text: Here is some text
-						Expression: 0
+						Text: Watch out! It's a depths worm!
+						Expression: 3
 					}
 					onBrainOfCthulhu: {
 						Text: Here is some text
 						Expression: 0
 					}
 					onQueenBee: {
-						Text: Here is some text
-						Expression: 0
+						Text: ♪ Dun dududu~dun du du~dun dudududu~dun ♫
+						Expression: 3
 					}
 					onSkeletron: {
-						Text: Here is some text
-						Expression: 0
+						Text: Tis the creature that slain me! Before I became the Nightmare Queen, of course.
+						Expression: 3
 					}
 					onWallOfFlesh: {
-						Text: Here is some text
-						Expression: 0
+						Text: Can I have one of those in the Constant?
+						Expression: 4
 					}
 					onTwins: {
-						Text: Here is some text
-						Expression: 0
+						Text: Hey, it's the Twins of Terror! Just Pan Flute one and kite the other!
+						Expression: 3
 					}
 					onDeerclops: {
-						Text: Here is some text
-						Expression: 0
+						Text: Finally, a worthy opponent for your talents! Unlike the rest of the trash here...
+						Expression: 3
 					}
 					onQueenSlime: {
-						Text: Here is some text
-						Expression: 0
+						Text: Oooh, shiny!
+						Expression: 4
 					}
 					onEmpress: {
-						Text: Here is some text
-						Expression: 0
+						Text: Stop being so bright! I can't ~hiss~~ over here!
+						Expression: 1
 					}
 					onDestroyer: {
-						Text: Here is some text
-						Expression: 0
+						Text: That is a pretty spiced up Sentrypede! Have to admire Wortox's ingenuity.
+						Expression: 4
 					}
 					onSkeletronPrime: {
-						Text: Here is some text
-						Expression: 0
+						Text: You have returned, Fuelweaver?
+						Expression: 2
 					}
 					onPlantera: {
-						Text: Here is some text
-						Expression: 0
+						Text: What an annoying overgrown lureplant. I'm sure you've handled lureplants before.
+						Expression: 1
 					}
 					onGolem: {
-						Text: Here is some text
-						Expression: 0
+						Text: An interesting design...perhaps the Ancients should make something as ingenious as this.
+						Expression: 4
 					}
 					onDukeFishron: {
-						Text: Here is some text
-						Expression: 0
+						Text: Wortox sure went all out with the designs of these creatures.
+						Expression: 3
 					}
 					onLunaticCultist: {
-						Text: Here is some text
-						Expression: 0
+						Text: No! No more Alter-worship! No more eternal light!
+						Expression: 2
 					}
 					onMoonLord: {
-						Text: Here is some text
-						Expression: 0
+						Text: Begone, Alter! I'm trying to hiss!
+						Expression: 2
 					}
 					onWarriorOfLight: {
-						Text: Here is some text
-						Expression: 0
+						Text: You are the worst of them all! How is the Queen of Darkness supposed to hiss with so much light?
+						Expression: 2
 					}
 					onVagrant: {
-						Text: Here is some text
-						Expression: 0
+						Text: Perseus. How annoying.
+						Expression: 1
 					}
 					onNalhaun: {
-						Text: Here is some text
-						Expression: 0
+						Text: He reminds me a lot of Maxy. Pride. Arrogance. Conceit.
+						Expression: 2
 					}
 					onPenth: {
-						Text: Here is some text
-						Expression: 0
+						Text: She...reminds me of myself. Somehow.
+						Expression: 4
 					}
 					onArbiter: {
-						Text: Here is some text
-						Expression: 0
+						Text: Spooky. Scary!
+						Expression: 3
 					}
 					onDesertScourge: {
-						Text: Here is some text
-						Expression: 0
+						Text: Tis' just a worm. You handled worms before, haven't you, {0}?
+						Expression: 3
 					}
 					onCrabulon: {
-						Text: Here is some text
-						Expression: 0
+						Text: Watch out, it's the Crab King! Hope you slotted in 6 Nightmare Gems so I can counteract his powers!
+						Expression: 3
 					}
 					onHiveMind: {
-						Text: Here is some text
-						Expression: 0
+						Text: That is a beautiful little hive mind.
+						Expression: 6
 					}
 					onPerforators: {
-						Text: Here is some text
-						Expression: 0
+						Text: That is what I like in a boss.
+						Expression: 6
 					}
 					onSlimeGod: {
-						Text: Here is some text
-						Expression: 0
+						Text: Urgh...these things will make us very much not dapper.
+						Expression: 1
 					}
 					onCryogen: {
-						Text: Here is some text
-						Expression: 0
+						Text: I've created worse winters than this.
+						Expression: 3
 					}
 					onAquaticScourge: {
-						Text: Here is some text
-						Expression: 0
+						Text: This is just a normal worm, but aquatic. What a pathetic annoyance.
+						Expression: 1
 					}
 					onBrimstoneElemental: {
-						Text: Here is some text
-						Expression: 0
+						Text: Now, here's a dapper girl.
+						Expression: 3
 					}
 					onCalamitas: {
-						Text: Here is some text
-						Expression: 0
+						Text: This girl's even more dapper than the last! I like her style!
+						Expression: 6
 					}
 					onSiren: {
-						Text: Here is some text
-						Expression: 0
+						Text: If you hit me, I will do worse than that fish thing under the sea.
+						Expression: 2
 					}
 					onAnahita: {
-						Text: Here is some text
-						Expression: 0
+						Text: Is this how Maxy sees me, {0}?
+						Expression: 4
 					}
 					onLeviathan: {
-						Text: Here is some text
-						Expression: 0
+						Text: That...certainly is an accurate representation of Maxy. You did well, Wortox.
+						Expression: 3
 					}
 					onAstrumAureus: {
-						Text: Here is some text
-						Expression: 0
+						Text: The Constant could really do with some new threats...
+						Expression: 3
 					}
 					onPlaguebringer: {
-						Text: Here is some text
-						Expression: 0
+						Text: I should make my Bee Queen poisonous, too!
+						Expression: 3
 					}
 					onRavager: {
-						Text: Here is some text
-						Expression: 0
+						Text: That is a beautiful piece of machinery.
+						Expression: 3
 					}
 					onAstrumDeus: {
-						Text: Here is some text
-						Expression: 0
+						Text: Err...Mister Astreum Deus...can you help terrorize the Hamlets of Swinesbury?
+						Expression: 4
 					}
 					onProfanedGuardian: {
-						Text: Here is some text
-						Expression: 0
+						Text: They guard...a goddess?
+						Expression: 4
 					}
 					onDragonfolly: {
-						Text: Here is some text
-						Expression: 0
+						Text: Watch out, it's the Dragonfly! Though if you are a Wigfrid main, you could probably facetank it...
+						Expression: 3
 					}
 					onProvidence: {
-						Text: Here is some text
-						Expression: 0
+						Text: Oh, look, it is a goddess!
+						Expression: 3
 					}
 					onStormWeaver: {
-						Text: Here is some text
-						Expression: 0
+						Text: If only I could bring one back to the Constant...
+						Expression: 4
 					}
 					onCeaselessVoid: {
-						Text: Here is some text
-						Expression: 0
+						Text: The Devourer, huh? Wonders how it matches up to Them...
+						Expression: 4
 					}
 					onSignus: {
-						Text: Here is some text
-						Expression: 0
+						Text: Hmm...I can't wait to fight this "Devourer"...must I go through his flunkies?
+						Expression: 4
 					}
 					onPolterghast: {
-						Text: Here is some text
-						Expression: 0
+						Text: That's just a glorified pile of Gestalts!
+						Expression: 2
 					}
 					onOldDuke: {
-						Text: Here is some text
-						Expression: 0
+						Text: Wortox was always one for family...
+						Expression: 3
 					}
 					onDog: {
-						Text: Here is some text
-						Expression: 0
+						Text: Aaw, how adorable! Not as cute as Chester, though.
+						Expression: 6
 					}
 					onYharon: {
-						Text: Here is some text
-						Expression: 0
+						Text: It would be so nice to have one of those in the Constant...hehe...
+						Expression: 3
 					}
 					onYharonDespawn: {
-						Text: Here is some text
-						Expression: 0
+						Text: Why did he disappear?
+						Expression: 4
 					}
 					onSupremeCalamitas: {
-						Text: Here is some text
-						Expression: 0
+						Text: What a dapper lady! Almost as dapper as me!
+						Expression: 6
 					}
 					onDraedon: {
-						Text: Here is some text
-						Expression: 0
+						Text: You remind me of my sister's boss! Go to hell!
+						Expression: 2
 					}
 					onArtemis: {
-						Text: Here is some text
-						Expression: 0
+						Text: Bet sis could whip up something better than that...pile of eyes!
+						Expression: 2
 					}
 					onThanatos: {
-						Text: Here is some text
-						Expression: 0
+						Text: Bet sis could whip up something better than that...worm!
+						Expression: 2
 					}
 					onAres: {
-						Text: Here is some text
-						Expression: 0
+						Text: Bet sis could whip up something better than that...skull thing!
+						Expression: 2
 					}
 					onTrojanSquirrel: {
-						Text: Here is some text
-						Expression: 0
+						Text: Heard there's an squirrel inside! Wanna check!
+						Expression: 6
 					}
 					onDeviantt: {
-						Text: Here is some text
-						Expression: 0
+						Text: How absurdly luminous! Disgusting!
+						Expression: 2
 					}
 					onEridanus: {
-						Text: Here is some text
-						Expression: 0
+						Text: Now that's someone I like. What a dapper sense of style!
+						Expression: 6
 					}
 					onAbominationn: {
-						Text: Here is some text
-						Expression: 0
+						Text: Nice and spooky - what I love in a boss!
+						Expression: 6
 					}
 					onMutant: {
-						Text: Here is some text
-						Expression: 0
+						Text: That...thing...can Wortox come up with something better?
+						Expression: 1
 					}
 					onGrandThunderBird: {
-						Text: Here is some text
-						Expression: 0
+						Text: It's like a bigger version of those found near Swinesbury!
+						Expression: 4
 					}
 					onQueenJellyfish: {
-						Text: Here is some text
-						Expression: 0
+						Text: Another queen? She's not dapper, though...
+						Expression: 3
 					}
 					onViscount: {
-						Text: Here is some text
-						Expression: 0
+						Text: Now that, is beautiful. Wortox's friends did a good job making one of those.
+						Expression: 3
 					}
 					onGraniteEnergyStorm: {
-						Text: Here is some text
-						Expression: 0
+						Text: An elemental golem? I personally prefer my big beasts.
+						Expression: 3
 					}
 					onBuriedChampion: {
-						Text: Here is some text
-						Expression: 0
+						Text: Swinesbury has greater champions than that pathetic thing!
+						Expression: 1
 					}
 					onStarScouter: {
-						Text: Here is some text
-						Expression: 0
+						Text: Perhaps there should be these unidentified things in the Constant, hmm?
+						Expression: 4
 					}
 					onBoreanStrider: {
-						Text: Here is some text
-						Expression: 0
+						Text: Deerclops is scarier than this...thing.
+						Expression: 1
 					}
 					onCoznix: {
-						Text: Here is some text
-						Expression: 0
+						Text: That is, what I most definitely like, in a boss. Good job, Wortox's friends!
+						Expression: 3
 					}
 					onLich: {
-						Text: Here is some text
-						Expression: 0
+						Text: Wortox's friends did good here. Perhaps I should give Wortox the ability to teleport across the map with souls.
+						Expression: 3
 					}
 					onAbyssion: {
-						Text: Here is some text
-						Expression: 0
+						Text: Day by day, I love what Wortox's friends have created here more and more.
+						Expression: 3
 					}
 					onPrimordials: {
-						Text: Here is some text
-						Expression: 0
+						Text: Wortox's friends, if you are hearing this...I'm disappointed.
+						Expression: 1
 					}
 					onPutridPinky: {
-						Text: Here is some text
-						Expression: 0
+						Text: Bleugh. Not dapper.
+						Expression: 1
 					}
 					onPharaoh: {
-						Text: Here is some text
-						Expression: 0
+						Text: Here's a curse worth taking!
+						Expression: 3
 					}
 					onAdvisor: {
-						Text: Here is some text
-						Expression: 0
+						Text: Not my style, but still...
+						Expression: 1
 					}
 					onPolaris: {
-						Text: Here is some text
-						Expression: 0
+						Text: The chill's nice. The light, though...
+						Expression: 3
 					}
 					onLux: {
-						Text: Here is some text
-						Expression: 0
+						Text: Lux?
+						Expression: 4
 					}
 					onSubspaceSerpent: {
-						Text: Here is some text
-						Expression: 0
+						Text: What's with Wortox and serpents?
+						Expression: 1
 					}
 					onEnterDesert: {
-						Text: Here is some text
-						Expression: 0
+						Text: Here lies the Dragon-Fly!
+						Expression: 3
 					}
 					onEnterJungle: {
-						Text: Here is some text
-						Expression: 0
+						Text: Can't wait for Snapteeth to eat you up!
+						Expression: 3
 					}
 					onEnterBeach: {
-						Text: Here is some text
-						Expression: 0
+						Text: Gather some shells, craft a surfboard, and don't get Shipwrecked!
+						Expression: 6
 					}
 					onEnterSpace: {
-						Text: Here is some text
-						Expression: 0
+						Text: I could see Swinesbury from here!
+						Expression: 4
 					}
 					onEnterUnderworld: {
-						Text: Here is some text
-						Expression: 0
+						Text: Is...this where Maxy is?
+						Expression: 4
 					}
 					onEnterCorruption: {
-						Text: Here is some text
-						Expression: 0
+						Text: Urgh. Filthy, slimy...not dapper...at least the monsters are scary, though.
+						Expression: 2
 					}
 					onEnterCrimson: {
-						Text: Here is some text
-						Expression: 0
+						Text: Eew! This is most certainly the opposite of dapper!
+						Expression: 2
 					}
 					onEnterSnow: {
-						Text: Here is some text
-						Expression: 0
+						Text: Like Winter in the Constant! Beware of the Deerclops!
+						Expression: 3
 					}
 					onEnterHallow: {
-						Text: Here is some text
-						Expression: 0
+						Text: Too...bright...hate...it...can't...hiss...
+						Expression: 2
 					}
 					onEnterMushroom: {
-						Text: Here is some text
-						Expression: 0
+						Text: Here lies Toadstool. What an annoyingly long boss fight.
+						Expression: 3
 					}
 					onEnterDungeon: {
-						Text: Here is some text
-						Expression: 0
+						Text: Spooky, scary, skeletons. Just my style.
+						Expression: 3
 					}
 					onEnterMeteorite: {
-						Text: Here is some text
-						Expression: 0
+						Text: Like a color out of space!
+						Expression: 6
 					}
 					onEnterVerdant: {
-						Text: Here is some text
-						Expression: 0
+						Text: This...is too nice...Wortox, don't baby {0}!
+						Expression: 5
 					}
 					onEnterCrag: {
-						Text: Here is some text
-						Expression: 0
+						Text: What a dapper locale!
+						Expression: 6
 					}
 					onEnterAstral: {
-						Text: Here is some text
-						Expression: 0
+						Text: We could have one of these in the Constant...
+						Expression: 3
 					}
 					onEnterSunkenSea: {
-						Text: Here is some text
-						Expression: 0
+						Text: Herein great Moon-Lord waits dreaming, dead, in his home at Rl'yeh...
+						Expression: 3
 					}
 					onEnterSulphurSea: {
-						Text: Here is some text
-						Expression: 0
+						Text: Disgusting.
+						Expression: 2
 					}
 					onEnterAbyss: {
-						Text: Here is some text
-						Expression: 0
+						Text: In Their home in the Constant, dead Them waits dreaming...
+						Expression: 3
 					}
 					onEnterGranite: {
-						Text: Here is some text
-						Expression: 0
+						Text: A beautifully dapper material.
+						Expression: 6
 					}
 					onEnterMarble: {
-						Text: Here is some text
-						Expression: 0
+						Text: Maxy used to love these.
+						Expression: 3
 					}
 					onEnterAquaticDepths: {
-						Text: Here is some text
-						Expression: 0
+						Text: \"Azathoth\". Disgusting name.
+						Expression: 2
 					}
 					onRain: {
-						Text: Here is some text
-						Expression: 0
+						Text: Damp is not dapper.
+						Expression: 1
 					}
 					onSnow: {
-						Text: Here is some text
-						Expression: 0
+						Text: Hope you brought a thermal stone!
+						Expression: 3
 					}
 					onSandstorm: {
-						Text: Here is some text
-						Expression: 0
+						Text: Antlion is at it again...
+						Expression: 1
 					}
 					onKeyOfChronology: {
-						Text: Here is some text
-						Expression: 0
+						Text: Reality bends to Their will!
+						Expression: 3
+					}
+					onKeyOfChronology_1: {
+						Text: Time and space is nothing to Them!
+						Expression: 2
+					}
+					onKeyOfChronology_2: {
+						Text: Even Wanda can't do this!
+						Expression: 6
 					}
 					onLivingDead: {
-						Text: Here is some text
-						Expression: 0
+						Text: They will not let you die!
+						Expression: 3
+					}
+					onLivingDead_1: {
+						Text: Their power flows through you!
+						Expression: 2
+					}
+					onLivingDead_2: {
+						Text: Death holds no command over Them!
+						Expression: 6
 					}
 					onButchersDozen: {
-						Text: Here is some text
-						Expression: 0
+						Text: Ah! Fresh meat!
+						Expression: 6
+					}
+					onButchersDozen_1: {
+						Text: Hahaha, fresh meat!
+						Expression: 3
+					}
+					onButchersDozen_2: {
+						Text: A dapper butchering even Pudge can't match!
+						Expression: 6
 					}
 					onStellarNovaCharged: {
-						Text: Here is some text
-						Expression: 0
+						Text: ...Their power waxes strong.
+						Expression: 3
+					}
+					onStellarNovaCharged_1: {
+						Text: Shadows encircle us...
+						Expression: 3
+					}
+					onStellarNovaCharged_2: {
+						Text: Strength...from them...
+						Expression: 6
+					}
+					onStellarNovaCharged_3: {
+						Text: All you had to do, is let, Them, in.
+						Expression: 3
+					}
+					onStellarNovaCharged_4: {
+						Text: Let. Them. In.
+						Expression: 6
+					}
+					onStellarNovaCharged_5: {
+						Text: They are ready.
+						Expression: 3
+					}
+					onStellarNovaCharged_6: {
+						Text: This is enough for Them.
+						Expression: 3
 					}
 					onObservatory: {
-						Text: Here is some text
-						Expression: 0
+						Text:
+							'''
+							The Celestial Observatory?
+							Well, your Starfarers can't save you here.
+							'''
+						Expression: 3
 					}
 					onSpaceRuins: {
-						Text: Here is some text
-						Expression: 0
+						Text: Spooky...
+						Expression: 4
 					}
 					onCitadel: {
-						Text: Here is some text
-						Expression: 0
+						Text: Is this where the Color came from? This place seems to be devoid of color, after all...
+						Expression: 3
 					}
 					onConfluence: {
-						Text: Here is some text
-						Expression: 0
+						Text: Tsuki-yomi...
+						Expression: 2
 					}
 					onCity: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPoison: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onIchor: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSilence: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCurse: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onFrozen: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onFrostburn: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onWebbed: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onStoned: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onBurning: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSuffocation: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onFire: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDrowning: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onBleeding: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onConfusion: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onKillCritter: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onKillEnemy: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onKillEnemyDanger: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onKillBossEnemy: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCrit: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onTakeHeavyDamage: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDeath: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onUnknownBoss: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEyeOfCthulhu: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onKingSlime: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEaterOfWorlds: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onBrainOfCthulhu: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onQueenBee: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSkeletron: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onWallOfFlesh: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onTwins: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDeerclops: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onQueenSlime: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEmpress: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDestroyer: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSkeletronPrime: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPlantera: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onGolem: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDukeFishron: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onLunaticCultist: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onMoonLord: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onWarriorOfLight: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onVagrant: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onNalhaun: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPenth: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onArbiter: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDesertScourge: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCrabulon: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onHiveMind: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPerforators: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSlimeGod: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCryogen: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAquaticScourge: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onBrimstoneElemental: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCalamitas: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSiren: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAnahita: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onLeviathan: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAstrumAureus: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPlaguebringer: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onRavager: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAstrumDeus: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onProfanedGuardian: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDragonfolly: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onProvidence: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onStormWeaver: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCeaselessVoid: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSignus: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPolterghast: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onOldDuke: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDog: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onYharon: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onYharonDespawn: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSupremeCalamitas: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDraedon: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onArtemis: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onThanatos: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAres: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onTrojanSquirrel: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onDeviantt: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEridanus: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAbominationn: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onMutant: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onGrandThunderBird: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onQueenJellyfish: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onViscount: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onGraniteEnergyStorm: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onBuriedChampion: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onStarScouter: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onBoreanStrider: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCoznix: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onLich: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAbyssion: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPrimordials: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPutridPinky: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPharaoh: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onAdvisor: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onPolaris: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onLux: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSubspaceSerpent: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterDesert: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterJungle: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterSpace: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterUnderworld: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterBeach: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterCorruption: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterCrimson: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterSnow: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterHallow: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterMushroom: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterDungeon: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterMeteorite: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterVerdant: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterCrag: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterAstral: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterSunkenSea: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterSulphurSea: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterAbyss: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterGranite: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterMarble: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onEnterAquaticDepths: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onRain: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSnow: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSandstorm: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onKeyOfChronology: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onLivingDead: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onButchersDozen: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onStellarNovaCharged: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onObservatory: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onSpaceRuins: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCitadel: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onConfluence: {
-						Text: Here is some text
-						Expression: 0
-					}
-					onCity: {
-						Text: Here is some text
-						Expression: 0
+						Text: Unexplorable.
+						Expression: 0
+					}
+				}
+				VN: {
+					PerseusDefeated: {
+						VNText: {
+							1: {
+								Text: So, "Perseus", was it? It appears that I have finally tracked you down.
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							2: {
+								Text: I...will...never...
+								ActiveSpeaker: Perseus
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							3: {
+								Text: There's nothing you can do. I'm the Nightmare Queen, and you are just a smote of energy as compared to me.
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							4: {
+								Text: ...never...relinquish...my...Stellar...Nova...
+								ActiveSpeaker: Perseus
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							5: {
+								Text: You never had a choice. After all, if They will it, who are you to stop Them?
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							6: {
+								Text: You will forget all of this in due time. They are merciful, after all.
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							7: {
+								Text: No...I-..I won't!
+								ActiveSpeaker: Perseus
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							8: {
+								Text: U-urgh...
+								ActiveSpeaker: Perseus
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							9: {
+								Text: \"Theofania Inanis\". It seems you Starfarers weren't as useless as I would have thought.
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							10: {
+								Text: Besides, you did track that light-bearing bastard child of Tsukiyomi, after all.
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							11: {
+								Text: Once I snuff him out, the universe will be purged of his retch-inducing light!
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+							12: {
+								Text: ...for I, am the Queen of Darkness.
+								ActiveSpeaker: Charlie
+								Speaker1: Charlie
+								Speaker1Pose: 0
+								Speaker1Expression: 0
+							}
+						}
 					}
 				}
 			}
