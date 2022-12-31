@@ -1,4 +1,4 @@
-﻿using Terraria.Localization;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using StarsAboveAPI;
@@ -22,6 +22,23 @@ namespace StarsAboveAPI
         public static Mod StarsAbove { get { if (starsAbove == null) ModLoader.TryGetMod("StarsAbove", out starsAbove); return starsAbove; } }
         private static Mod starsAboveAPI = null;
         private static Mod starsAbove = null;
+
+        //Garbage Collection
+        class APILoader : ILoadable
+        {
+            public void Load(Mod mod)
+            {
+                starsAboveAPI = null;
+                starsAbove = null;
+            }
+
+            public void Unload()
+            {
+                starsAboveAPI = null;
+                starsAbove = null;
+                YourMod = null;
+            }
+        }
 
         /// <summary>
         /// Gets the current starfarer visible attire.
@@ -203,7 +220,7 @@ namespace StarsAboveAPI
         /// <param name="condition">return true if stuff is done, otherwise return false. Also do stuff in here. Can be null.</param>
         /// <param name="OnDialogAdvanced">When dialog is advanced</param>
         /// <param name="OnOptionPressed">When option button is pressed. Top is 0, etc.</param>
-        internal static int AddModdedVNScene(Action<int, object[]> VNLogic, Action<SpriteBatch, UIState, int, string, Tuple<string, int, int, Rectangle, Color>[], int> CustomDrawLogic = null, Func<Tuple<string, int>[]> GetDialogOptions = null, float priority = 1, Func<bool> condition = null, Action OnDialogAdvanced = null, Action<int> OnOptionPressed = null)
+        internal static int AddModdedVNScene(Func<int, object[]> VNLogic, Action<SpriteBatch, UIState, int, string, Tuple<string, int, int, Rectangle, Color>[], int> CustomDrawLogic = null, Func<Tuple<string, int>[]> GetDialogOptions = null, float priority = 1, Func<bool> condition = null, Action OnDialogAdvanced = null, Action<int> OnOptionPressed = null)
         {
             return (int)StarsAboveAPI.Call(YourMod, 6, VNLogic, CustomDrawLogic, GetDialogOptions, priority, condition, OnDialogAdvanced, OnOptionPressed);
         }
@@ -978,7 +995,7 @@ namespace StarsAboveAPI
             }
             return null;
         }
-        public override void VNLogic(int stage, ref int sceneLength, ref bool sceneHasChoice, ref string sceneChoice1, ref string sceneChoice2, ref int choice1SceneID, ref int choice2SceneID, ref string character1, ref int character1Pose, ref int character1Expression, ref string character2, ref int character2Pose, ref int character2Expression, ref string speakerName, ref string dialogue)
+        public override void VNLogic(int stage, ref int sceneLength, ref bool sceneHasChoice, ref string sceneChoice1, ref string sceneChoice2, ref int choice1SceneID, ref int choice2SceneID, ref string character1, ref int character1Pose, ref int character1Expression, ref string character2, ref int character2Pose, ref int character2Expression, ref string speakerName, ref string dialogue, ref bool thirdOption, ref string sceneChoice3, ref int choice3Scene)
         {
             Relocalize();
             sceneHasChoice = dialogOptions != null;
@@ -1069,7 +1086,7 @@ namespace StarsAboveAPI
 
         }
 
-        void VNLogic(int stage, object[] returnData)
+        object[] VNLogic(int stage)
         {
             int sceneLength = 0; //0
             bool sceneHasChoice = false; // 1
@@ -1085,23 +1102,32 @@ namespace StarsAboveAPI
             int character2Expression = 0; //11
             string name = ""; //12
             string dialogue = ""; //13
+            bool thirdOption = false;//14
+            string sceneChoice3 = "";//15
+            int choice3Scene = 0;//16
 
-            VNLogic(stage, ref sceneLength, ref sceneHasChoice, ref sceneChoice1, ref sceneChoice2, ref choice1Scene, ref choice2Scene, ref character1, ref character1Pose, ref character1Expression, ref character2, ref character2Pose, ref character2Expression, ref name, ref dialogue);
+            VNLogic(stage, ref sceneLength, ref sceneHasChoice, ref sceneChoice1, ref sceneChoice2, ref choice1Scene, ref choice2Scene, ref character1, ref character1Pose, ref character1Expression, ref character2, ref character2Pose, ref character2Expression, ref name, ref dialogue, ref thirdOption, ref sceneChoice3, ref choice3Scene);
 
-            returnData[0] = sceneLength;
-            returnData[1] = sceneHasChoice;
-            returnData[2] = sceneChoice1;
-            returnData[3] = sceneChoice2;
-            returnData[4] = choice1Scene;
-            returnData[5] = choice2Scene;
-            returnData[6] = character1;
-            returnData[7] = character1Pose;
-            returnData[8] = character1Expression;
-            returnData[9] = character2;
-            returnData[10] = character2Pose;
-            returnData[11] = character2Expression;
-            returnData[12] = name;
-            returnData[13] = dialogue;
+            object[] returnData = new object[] {
+               sceneLength,
+                sceneHasChoice,
+                sceneChoice1,
+                sceneChoice2,
+                choice1Scene,
+                 choice2Scene,
+               character1,
+              character1Pose,
+                character1Expression,
+                character2,
+                character2Pose,
+               character2Expression,
+                name,
+                dialogue,
+                thirdOption,
+                sceneChoice3,
+                choice3Scene
+            };
+            return returnData;
         }
 
         public virtual void VNLogic(int stage,
@@ -1118,7 +1144,10 @@ namespace StarsAboveAPI
             ref int character2Pose,
             ref int character2Expression,
             ref string speakerName,
-            ref string dialogue)
+            ref string dialogue,
+            ref bool thirdOption,
+            ref string sceneChoice3,
+            ref int choice3Scene)
         { }
     }
 }
